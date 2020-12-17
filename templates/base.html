@@ -1,0 +1,31 @@
+<!-- base.html -->
+<!-- Description: this is a base file to use for additional templates -->
+<!-- This is where our default boilerplate html lives -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+	<!-- Link to the main.css -->
+	<!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+
+	<!-- Add Jinja2 syntax creating block in template for the title -->
+	{% block title %}{% endblock %}
+
+	<!-- Add Jinja2 syntax creating block in template for the head -->
+	{% block head %}{% endblock %}
+</head>
+<body>
+	<!-- Add Jija2 syntax creating block in template for the body -->
+	{% block body %}{% endblock %}
+</body>
+
+<!-- Link to the main.js -->
+<!-- Can't link directly to static/js/main.js using templates, have to use url_for instead -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+</html>
