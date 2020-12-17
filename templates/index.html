@@ -1,12 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie-edge">
-	<title>Home Page for Flash Learning Web App</title>
-</head>
-<body>
-	Hello Team Penguin
-</body>
-</html>
+
+<!-- Links to 'base.html' as a base template file (this is where our default html boilerplate lives) -->
+{% extends 'base.html' %}
+
+<!-- Jinja2 Template Block for title of webpage -->
+{% block title %}
+<title>Home Page for Flash Learning Web App</title>
+{% endblock %}
+
+<!-- Jinja2 Template Block for Head of Webpage -->
+{% block head %}
+<h1>Header: Hello Team Penguin</h1>
+{% endblock %}
+
+<!-- Jinja2 Template Block for Body of Webpage -->
+{% block body %}
+Body: Hello Team Penguin
+{% endblock %}
