@@ -1,7 +1,9 @@
 # app.py
 
-# Import the Flask class (for the main app) and render_templates to run routes based on templates
-from flask import Flask, render_template
+# Import the Flask class (for the main app)
+# Import render_templates to run routes based on templates
+# Import url_for in order to link stylesheets in the base jinja2 template
+from flask import Flask, render_template, url_for
 
 # Starts a new Flask app using this app file
 app = Flask(__name__)

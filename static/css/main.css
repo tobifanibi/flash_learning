@@ -1,0 +1,8 @@
+body {
+
+	/* Removes margin in body */
+	margin: 0;
+
+	/* Set font family */
+	font-family: sans-serif;
+}
