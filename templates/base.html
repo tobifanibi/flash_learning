@@ -10,7 +10,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie-edge">
 
 	<!-- Link to the main.css -->
-	<!-- Can't link directly to static/main.css using templates, have to use url_for instead -->
+	<!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
 
 	<!-- Add Jinja2 syntax creating block in template for the title -->
@@ -23,4 +23,9 @@
 	<!-- Add Jija2 syntax creating block in template for the body -->
 	{% block body %}{% endblock %}
 </body>
+
+<!-- Link to the main.js -->
+<!-- Can't link directly to static/js/main.js using templates, have to use url_for instead -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
 </html>
