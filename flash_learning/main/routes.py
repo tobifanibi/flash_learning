@@ -1,12 +1,12 @@
 import os
-from flask import Blueprint, flash, redirect, render_template, url_for
+from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_user, current_user, logout_user
 from werkzeug.urls import url_parse
 
 from flash_learning.models.user import User
 from flash_learning.models.forms import LoginForm,SignupForm
 from flash_learning import db
-from flask import request
+
 
 main = Blueprint("main", __name__)
 
