@@ -2,11 +2,6 @@
 <!-- Links to 'base.html' as a base template file (this is where our default html boilerplate lives) -->
 {% extends 'base.html' %}
 
-<!-- Jinja2 Template Block for title of webpage -->
-{% block title %}
-<title>Home Page for Flash Learning Web App</title>
-{% endblock %}
-
 <!-- Jinja2 Template Block for Head of Webpage -->
 {% block head %}
 <script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}"></script>
@@ -14,11 +9,22 @@
 
 <!-- Jinja2 Template Block for Body of Webpage -->
 {% block body %}
-<form method="post" id="login">
-  {{ form.username.label }}:{{ form.username }}
-    <br>
-   {{ form.password.label }}: {{ form.password }}
-            {{ form.csrf_token }}
-    <input type="submit" value="Submit" name="Submit">
-<!--</form>-->
+    <form action="" method="post" id="login" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}:{{ form.username() }}<br>
+            {% for error in form.username.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}: {{ form.password() }}<br>
+            {% for error in form.password.errors %}
+                <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.submit() }}
+        </p>
+    </form>
 {% endblock %}
