@@ -26,6 +26,15 @@
 	{% block head %}{% endblock %}
 </head>
 <body>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {%  endwith %}
 	<!-- Add Jija2 syntax creating block in template for the body -->
 	{% block body %}{% endblock %}
 </body>
