@@ -1,0 +1,28 @@
+
+<!-- Links to 'base.html' as a base template file (this is where our default html boilerplate lives) -->
+{% extends 'base.html' %}
+
+<!-- Jinja2 Template Block for title of webpage -->
+{% block title %}
+<title>Home Page for Flash Learning Web App</title>
+{% endblock %}
+
+<!-- Jinja2 Template Block for Head of Webpage -->
+{% block head %}
+{% endblock %}
+
+<!-- Jinja2 Template Block for Body of Webpage -->
+{% block body %}
+<form method="post" id="signup">
+    {{ form.username.label }}:{{ form.username() }}
+    <br>
+    {{ form.email.label }}:{{ form.email() }}
+    <br>
+    {{ form.password.label }}:{{ form.password() }}
+    <br>
+    {{ form.grade.label }}:{{ form.grade() }}
+    <br>
+    {{ form.school.label }}:{{ form.school() }}
+    <input type="submit" value="Submit" name="Submit">
+</form>
+{% endblock %}

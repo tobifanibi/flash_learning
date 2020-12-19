@@ -2,12 +2,14 @@ import os
 
 from flash_learning import create_app, db
 
+
 app = create_app()
 
 
 @app.before_first_request
 def create_tables():
     from flash_learning.models.flashcard import Flashcard
+    from flash_learning.models.user import User
     db.create_all()
 
 
