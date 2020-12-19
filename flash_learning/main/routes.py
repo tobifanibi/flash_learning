@@ -4,7 +4,7 @@ from flask_login import login_user, current_user, logout_user
 from werkzeug.urls import url_parse
 
 from flash_learning.models.user import User
-from flash_learning.models.forms import LoginForm,SignupForm
+from flash_learning.main.forms import LoginForm,SignupForm
 from flash_learning import db
 
 
