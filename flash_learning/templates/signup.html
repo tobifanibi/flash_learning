@@ -9,25 +9,20 @@
 
 <!-- Jinja2 Template Block for Head of Webpage -->
 {% block head %}
-<!--
-<script type="text/javascript" src="{{ url_for('static', filename='js/login.js') }}"></script>
--->
 {% endblock %}
 
 <!-- Jinja2 Template Block for Body of Webpage -->
 {% block body %}
 <form method="post" id="signup">
-
-    {{ form.username.label }}:{{ form.username }}
+    {{ form.username.label }}:{{ form.username() }}
     <br>
-    {{ form.email.label }}: {{ form.email }}
+    {{ form.email.label }}:{{ form.email() }}
     <br>
-    {{ form.password.label }}:{{ form.password }}
+    {{ form.password.label }}:{{ form.password() }}
     <br>
-    {{ form.grade.label }}:{{ form.grade }}
+    {{ form.grade.label }}:{{ form.grade() }}
     <br>
-    {{ form.school.label }}:{{ form.school }}
-            {{ form.csrf_token }}
+    {{ form.school.label }}:{{ form.school() }}
     <input type="submit" value="Submit" name="Submit">
-<!--</form>-->
+</form>
 {% endblock %}
