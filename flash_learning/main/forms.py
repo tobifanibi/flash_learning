@@ -50,7 +50,7 @@ def check_password(form, field):
     if re.search(form.first_name.data,field.data,re.IGNORECASE)!=None:
         raise ValidationError("Password Can Not Contain First Name")
     if re.search(form.last_name.data,field.data,re.IGNORECASE)!=None:
-        raise ValidationError("Password Can Not Last Name)
+        raise ValidationError("Password Can Not Last Name")
 
 class SignupForm(FlaskForm):
     first_name = StringField('first_name', validators=[DataRequired()])
