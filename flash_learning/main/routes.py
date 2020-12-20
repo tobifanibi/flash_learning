@@ -64,8 +64,8 @@ def signup():
                        grade=form.grade.data,
                        email=form.email.data,
                        password=form.password.data)
-        alternative_id=b64encode(os.urandom(24)).decode('utf-8')
-        while User.query.filter_by(alternative_id=alternative_id).first()!=None:
+        alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+        while Student.query.filter_by(alternative_id=alternative_id).first()!=None:
             alternative_id = b64encode(os.urandom(24)).decode('utf-8')
         user.set_password(form.password.data)
         user.alternative_id=alternative_id

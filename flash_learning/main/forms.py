@@ -3,7 +3,7 @@ from wtforms import StringField, PasswordField, SubmitField, IntegerField
 from wtforms.validators import DataRequired, Email, ValidationError
 from flash_learning.models.student import Student
 import re
-from flask import flash
+
 
 class LoginForm(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
@@ -11,7 +11,6 @@ class LoginForm(FlaskForm):
     submit = SubmitField("Sign In")
 def check_password(form, field):
     if len(field.data) < 8:
-        flash("Field must greater than 4 character")
         raise ValidationError('Password must greater than 4 character')
     if re.search("[0-9]",field.data)!=None:
         length=len(field.data)
@@ -37,23 +36,21 @@ def check_password(form, field):
             else:
                 count=1
             if count==3:
-                flash("Password can't not increment or have repeating numbers")
-                raise ValidationError("Password can't not have incrementing numbers")
+                raise ValidationError("Password can't have 123;456 or other single-incrementing numbers")
     if re.search("password",field.data,re.IGNORECASE)!=None and  re.search("password",field.data,re.IGNORECASE).start()==0:
-        flash("Password can not start with  the word Password[case-insenstive]")
-        raise ValidationError('weak password')
+        raise ValidationError('Password can not start with  the word Password[case-insenstive]')
     if len(re.findall("[A-Z]", field.data, re.IGNORECASE))==0:
-        flash("Password must contain at least 1 letter")
-        raise ValidationError('At least 1 letter')
+        raise ValidationError('Password must contain at least 1 letter')
     if len(re.findall("[0-9]",field.data))==0:
-        flash("Password must contain at least 1 number")
-        raise ValidationError('At least 1 number')
+        raise ValidationError('Password must contain at least 1 number')
     if (len(re.findall("[A-Z]",field.data,re.IGNORECASE))+len(re.findall("[0-9]",field.data)))==len(field.data):
-        flash("Password must contain at least 1 symbol")
-        raise ValidationError('At least 1 symbol')
+        raise ValidationError('Password must contain at least 1 symbol')
     if re.search(form.username.data,field.data,re.IGNORECASE)!=None:
-        flash("Password Can Not Contain User Name")
-        raise ValidationError("User Name  Can't be in Password")
+        raise ValidationError("Password Can Not Contain User Name")
+    if re.search(form.first_name.data,field.data,re.IGNORECASE)!=None:
+        raise ValidationError("Password Can Not Contain First Name")
+    if re.search(form.last_name.data,field.data,re.IGNORECASE)!=None:
+        raise ValidationError("Password Can Not Last Name)
 
 class SignupForm(FlaskForm):
     first_name = StringField('first_name', validators=[DataRequired()])
