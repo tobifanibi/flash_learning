@@ -74,7 +74,7 @@ def signup():
         db.session.commit()
         flash("Welcome to Flash Learning!")
         return redirect(url_for("main.login"))
-    # else:
+
 
     return render_template("signup.html", title="Sign Up", form=form)
 
