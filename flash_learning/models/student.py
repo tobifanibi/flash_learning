@@ -1,3 +1,6 @@
+import os
+from base64 import b64encode
+
 from werkzeug.security import check_password_hash, generate_password_hash
 
 from flash_learning import db, login_manager
@@ -5,10 +8,10 @@ from flask_login import UserMixin
 
 
 @login_manager.user_loader
-def load_user(id):
+def load_user(user_id):
     """Load a user from the database."""
 
-    return Student.query.filter_by(id=id).first()
+    return Student.query.filter_by(alternative_id=user_id).first()
 
 
 class Student(UserMixin, db.Model):
@@ -17,6 +20,7 @@ class Student(UserMixin, db.Model):
     #static key for user
     # primary keys are required by SQLAlchemy
     id = db.Column(db.Integer, primary_key=True)
+    alternative_id = db.Column(db.Integer, index=True)
     email = db.Column(db.String(120), index=True, unique=True)
     password = db.Column(db.String(128))
     first_name = db.Column(db.String)
@@ -32,6 +36,7 @@ class Student(UserMixin, db.Model):
         self.email = email
         self.grade = grade
         self.set_password(password)
+        self.alternative_id = b64encode(os.urandom(24)).decode('utf-8')
 
     def __repr__(self):
         return f"<User {self.username}>"
@@ -45,6 +50,11 @@ class Student(UserMixin, db.Model):
         """Check the password hash from the database against the given password."""
 
         return check_password_hash(self.password, password)
+
+    def get_id(self):
+        """Return the student's alternative ID"""
+
+        return self.alternative_id
 
 
 class StudentFlashcard(db.Model):
