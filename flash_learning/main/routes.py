@@ -3,7 +3,7 @@ from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_user, current_user, logout_user
 from werkzeug.urls import url_parse
 
-from flash_learning.models.user import User
+from flash_learning.models.student import Student
 from flash_learning.main.forms import LoginForm,SignupForm
 from flash_learning import db
 
@@ -29,19 +29,14 @@ def login():
 
     # Redirect the student to their home page if username and password are correct, otherwise stay at the login page.
     if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
+        user = Student.query.filter_by(username=form.username.data).first()
         if user is None or not user.check_password(form.password.data):
             flash("Invalid username or password")
             return redirect(url_for("main.login"))
         login_user(user)
-        next_page = request.args.get("next")
-        if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for("main.index")
-        return redirect(next_page)
+        return redirect(url_for("student.home", username=user.username))
 
     return render_template("login.html", title="Sign In", form=form)
-
-
 
 
 @main.route("/logout")
@@ -52,7 +47,7 @@ def logout():
     return redirect(url_for("main.index"))
 
 
-@main.route('/signup',methods=['POST','GET'])
+@main.route('/signup', methods=['POST','GET'])
 def signup():
     if current_user.is_authenticated:
         return redirect(url_for("main.index"))
@@ -60,13 +55,13 @@ def signup():
     form = SignupForm()
 
     if form.validate_on_submit():
-        user = User(username=form.username.data,
-                    email=form.email.data,
-                    school=form.school.data,
-                    grade=form.grade.data)
-  
-        user.alternative_id=os.urandom(16)
-        user.set_password(form.password.data)
+        user = Student(first_name=form.first_name.data,
+                       last_name=form.last_name.data,
+                       username=form.username.data,
+                       grade=form.grade.data,
+                       email=form.email.data,
+                       password=form.password.data)
+        user.alternative_id = os.urandom(16)
         login_user(user, remember=False)
         db.session.add(user)
         db.session.commit()
