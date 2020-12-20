@@ -60,15 +60,16 @@ def signup():
         return redirect(url_for("main.index"))
 
     form = SignupForm()
-    print(form.validate_on_submit())
-    print(form.is_submitted())
     if form.validate_on_submit():
         user = User(username=form.username.data,
                     email=form.email.data,
                     school=form.school.data,
                     grade=form.grade.data)
-        print(b64encode( os.urandom(24)).decode('utf-8'))
-        user.alternative_id=b64encode( os.urandom(24)).decode('utf-8')
+        # alternative_id=b64encode( os.urandom(24)).decode('utf-8')
+        alternative_id=b64encode(os.urandom(24)).decode('utf-8')
+        while User.query.filter_by(alternative_id=alternative_id).first()!=None:
+            alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+        user.alternative_id=alternative_id
         user.set_password(form.password.data)
         login_user(user, remember=False)
         db.session.add(user)
