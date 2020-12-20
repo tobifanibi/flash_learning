@@ -7,7 +7,6 @@ from flask_login import UserMixin
 @login_manager.user_loader
 def load_user(id):
     """Load a user from the database."""
-    # print(User.query.get(1))
     return User.query.filter_by(alternative_id=id).first()
 
 

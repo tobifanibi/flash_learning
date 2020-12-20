@@ -24,6 +24,9 @@
         </p>
         <p>
             {{ form.submit() }}
+            {{ form.csrf_token }}
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember"> Remember Me</label><br>
         </p>
     </form>
 {% endblock %}
