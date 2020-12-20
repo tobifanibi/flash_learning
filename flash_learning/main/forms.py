@@ -4,9 +4,6 @@ from wtforms.validators import DataRequired, Email, ValidationError
 from flash_learning.models.student import Student
 import re
 from flask import flash
-=======
-
-
 
 class LoginForm(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
