@@ -5,7 +5,7 @@ from flask_login import UserMixin
 from flask_sqlalchemy import SQLAlchemy
 import re
 from flask import flash
-from flash_learning.models.user import Student
+from flash_learning.models.user import User
 
 
 
@@ -72,7 +72,7 @@ class SignupForm(FlaskForm):
     def validate_username(self, username):
         """Check if the username is already taken."""
 
-        Student = Student.query.filter_by(username=username.data).first()
+        user = User.query.filter_by(username=username.data).first()
         if user is not None:
             raise ValidationError("Please use a different username.")
 
