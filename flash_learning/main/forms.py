@@ -1,11 +1,10 @@
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, SubmitField, IntegerField
 from wtforms.validators import DataRequired, Email, ValidationError
-from flask_login import UserMixin
-from flask_sqlalchemy import SQLAlchemy
+from flash_learning.models.student import Student
 import re
 from flask import flash
-from flash_learning.models.user import Student
+=======
 
 
 
@@ -59,27 +58,25 @@ def check_password(form, field):
         flash("Password Can Not Contain User Name")
         raise ValidationError("User Name  Can't be in Password")
 
-
 class SignupForm(FlaskForm):
+    first_name = StringField('first_name', validators=[DataRequired()])
+    last_name = StringField('last_name', validators=[DataRequired()])
     username = StringField('username', validators=[DataRequired()])
-    password = PasswordField('password', validators=[DataRequired(),check_password])
-    email = StringField('email', validators=[DataRequired(), Email()])
-    school = StringField(label='school', validators=[DataRequired()])
     grade = IntegerField('grade', validators=[DataRequired()])
-
-
+    email = StringField('email', validators=[DataRequired(), Email()])
+    password = PasswordField('password', validators=[DataRequired(),check_password])
+    submit = SubmitField("Sign Up")
 
     def validate_username(self, username):
         """Check if the username is already taken."""
 
-        Student = Student.query.filter_by(username=username.data).first()
+        user = Student.query.filter_by(username=username.data).first()
         if user is not None:
             raise ValidationError("Please use a different username.")
-
 
     def validate_email(self, email):
         """Check if the email is already tied to an account."""
 
-        email = User.query.filter_by(email=email.data).first()
+        email = Student.query.filter_by(email=email.data).first()
         if email is not None:
             raise ValidationError("Please use a different email address.")
