@@ -1,4 +1,5 @@
 import os
+
 from flask import Blueprint, flash, redirect, render_template, request, url_for, session
 from flask_login import login_user, current_user, logout_user
 from werkzeug.urls import url_parse
@@ -7,8 +8,6 @@ from flash_learning.models.student import Student
 from flash_learning.main.forms import LoginForm,SignupForm
 from flash_learning import db
 from base64 import b64encode
-from flash_learning.main.emailtask import create_confirmation_token, confirm_token
-
 
 
 main = Blueprint("main", __name__)
@@ -65,36 +64,18 @@ def signup():
                        grade=form.grade.data,
                        email=form.email.data,
                        password=form.password.data)
-        alternative_id = b64encode(os.urandom(24)).decode('utf-8')
-        while Student.query.filter_by(alternative_id=alternative_id).first()!=None:
+        alternative_id=b64encode(os.urandom(24)).decode('utf-8')
+        while User.query.filter_by(alternative_id=alternative_id).first()!=None:
             alternative_id = b64encode(os.urandom(24)).decode('utf-8')
         user.set_password(form.password.data)
         user.alternative_id=alternative_id
         login_user(user, remember=False)
-        token = create_confirmation_token(user.email)
-        token="localhost:5000/confirm/"+token
         db.session.add(user)
         db.session.commit()
         flash("Welcome to Flash Learning!")
-        flash(token)
         return redirect(url_for("main.login"))
+    # else:
+
     return render_template("signup.html", title="Sign Up", form=form)
 
 
-
-@main.route('/confirm/<token>', methods=['POST','GET'])
-def confirm_email(token):
-    try:
-        email = confirm_token(token)
-    except:
-        flash('This Confirmation Email has expired')
-        return redirect(url_for('main.index'))
-    user = Student.query.filter_by(email=email).first()
-    if user.activated:
-        flash('Account already confirmed. Please login.', 'success')
-    else:
-        user.activated = True
-        db.session.add(user)
-        db.session.commit()
-        flash('You have confirmed your account. Thanks!', 'success')
-    return redirect(url_for('main.index'))
