@@ -1,11 +1,13 @@
-{% extends 'base.html' %}
+{% extends 'student_base.html' %}
+
 {% block head %}
 
 {% endblock %}
+
+
 {% block body %}
     <h1>Hello, {{ user.username }}</h1>
     {% for subject in subjects %}
         <p>{{ subject.name }}</p>
     {% endfor %}
 {% endblock %}
-

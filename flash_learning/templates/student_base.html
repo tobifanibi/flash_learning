@@ -1,0 +1,55 @@
+{% include 'base.html' %}
+
+<link rel="stylesheet" href="{{ url_for('static', filename='fonts/icomoon/style.css') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+{% block head %}
+{% endblock %}
+
+
+<!-- Sidebar -->
+<aside class="sidebar">
+      <div class="toggle">
+        <a href="#" class="burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
+              <span></span>
+            </a>
+      </div>
+      <div class="side-inner">
+
+        <div class="profile">
+          <!-- <img src="images/person_4.jpg" alt="Image" class="img-fluid"> -->
+          <h3 class="name">{{ user.username }}</h3>
+          <span class="country"> Grade: {{ user.grade }} </span>
+        </div>
+
+        
+        <div class="nav-menu">
+          <ul>
+            <li><a href="#"><span class="mr-3"></span>Profile</a></li>
+            <li><a href="#"><span class="icon-house-door-fill mr-3"></span>Home</a></li>
+            <li><a href="#"><span class="icon-pie-chart-fill mr-3"></span>Stats</a></li>
+            <li><a href="#"><span class="icon-graph-up mr-3"></span>Leaderboard</a></li>
+            <li><a href="#"><span class="icon-file-excel-fill mr-3"></span>Sign out</a></li>
+          </ul>
+        </div>
+      </div>
+      
+    </aside>
+    <main>
+      <div class="site-section">
+        <div class="container">
+          <div class="row justify-content-center">
+
+<!-- Content goes here -->
+{% block body %}
+<script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.3.1.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% endblock %}
