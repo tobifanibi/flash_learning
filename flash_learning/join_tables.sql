@@ -1,0 +1,1 @@
+SELECT flashcard.number, deck.name as "deck_name", subject.name as "subject_name", grade.grade FROM flashcard JOIN deck on flashcard.deck_id = deck.id JOIN subject on deck.subject_id = subject.id JOIN grade on subject.grade_id = grade.id ORDER BY grade.grade, subject.name, deck.name;

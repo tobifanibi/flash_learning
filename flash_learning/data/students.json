@@ -1,0 +1,250 @@
+[
+  {
+    "first_name": "Betty",
+    "last_name": "Boop",
+    "username": "betty_boop",
+    "email": "betty@boop.com",
+    "password": "BoopTheSnoot123!",
+    "grade": "K"
+  },
+  {
+    "first_name": "Bugs",
+    "last_name": "Bunny",
+    "username": "bugs_bunny",
+    "email": "bugs@bunny.com",
+    "password": "Buggie789!!",
+    "grade": "K"
+  },
+  {
+    "first_name": "Charlie",
+    "last_name": "Brown",
+    "username": "charlie_brown",
+    "email": "charlie@brown.com",
+    "password": "BrownieCake4&!",
+    "grade": "K"
+  },
+  {
+    "first_name": "Daffy",
+    "last_name": "Duck",
+    "username": "daffy_duck",
+    "email": "daffy@duck.com",
+    "password": "QuackQuack67@@1",
+    "grade": "K"
+  },
+  {
+    "first_name": "Spongebob",
+    "last_name": "Squarepants",
+    "username": "spongebob_squarepants",
+    "email": "spongebob@squarepants.com",
+    "password": "IMREADy1!!",
+    "grade": "K"
+  },
+  {
+    "first_name": "Squidward",
+    "last_name": "Tentacles",
+    "username": "squidward_tentacles",
+    "email": "squidward@tentacles.com",
+    "password": "ClarinetIsLove333##",
+    "grade": "1"
+  },
+  {
+    "first_name": "Eugene",
+    "last_name": "Krabs",
+    "username": "eugene_krabs",
+    "email": "eugene@krabs.com",
+    "password": "MOneyMoneyM0ney!!",
+    "grade": "1"
+  },
+  {
+    "first_name": "Scooby",
+    "last_name": "Doo",
+    "username": "scooby_doo",
+    "email": "scooby@doo.com",
+    "password": "Ruff&&1111",
+    "grade": "1"
+  },
+  {
+    "first_name": "Tom",
+    "last_name": "Cat",
+    "username": "tom_cat",
+    "email": "tom@cat.com",
+    "password": "CatMix123!!",
+    "grade": "1"
+  },
+  {
+    "first_name": "Jerry",
+    "last_name": "Mouse",
+    "username": "jerry_mouse",
+    "email": "jerry@mouse.com",
+    "password": "CanttouchThis!#@!3",
+    "grade": "1"
+  },
+  {
+    "first_name": "Mickey",
+    "last_name": "Mouse",
+    "username": "mickey_mouse",
+    "email": "mickey@mouse.com",
+    "password": "HippityHoopla1234$$",
+    "grade": "2"
+  },
+  {
+    "first_name": "Winnie",
+    "last_name": "Pooh",
+    "username": "winnie_the_pooh",
+    "email": "winnie@thepooh.com",
+    "password": "HoneyLove&&1243",
+    "grade": "2"
+  },
+  {
+    "first_name": "Homer",
+    "last_name": "Simpson",
+    "username": "homer_simpson",
+    "email": "homer@simpson.com",
+    "password": "WOOHooo!@3",
+    "grade": "2"
+  },
+  {
+    "first_name": "Wile E.",
+    "last_name": "Coyote",
+    "username": "wile_e_coyote",
+    "email": "wile@ecoyote.com",
+    "password": "FallingFromabove123$",
+    "grade": "3"
+  },
+  {
+    "first_name": "Shaggy",
+    "last_name": "Rogers",
+    "username": "shaggy_rogers",
+    "email": "shaggy@rogers.com",
+    "password": "YOINKs!32",
+    "grade": "3"
+  },
+  {
+    "first_name": "Shrek",
+    "last_name": "Ogre",
+    "username": "shrek_the_ogre",
+    "email": "shrek@ogre.com",
+    "password": "ONionZ1#11",
+    "grade": "3"
+  },
+  {
+    "first_name": "Fred",
+    "last_name": "Flinstone",
+    "username": "fred_flinstone",
+    "email": "fred@flinstone.com",
+    "password": "YabaDabado00!",
+    "grade": "4"
+  },
+  {
+    "first_name": "Bart",
+    "last_name": "Simpson",
+    "username": "bart_simpson",
+    "email": "bart@simpson.com",
+    "password": "Hehehe&&132",
+    "grade": "4"
+  },
+  {
+    "first_name": "Pink",
+    "last_name": "Panther",
+    "username": "pink_panther",
+    "email": "pink@panther.com",
+    "password": "SneakyPink11^&",
+    "grade": "4"
+  },
+  {
+    "first_name": "Stewie",
+    "last_name": "Griffin",
+    "username": "stewie_griffin",
+    "email": "stewie@griffin.com",
+    "password": "WhatIsthisN0neSen$e",
+    "grade": "5"
+  },
+  {
+    "first_name": "Patrick",
+    "last_name": "Star",
+    "username": "patrick_star",
+    "email": "patrick@star.com",
+    "password": "Dr.ProfessorP4trick",
+    "grade": "5"
+  },
+  {
+    "first_name": "Timmy",
+    "last_name": "Turner",
+    "username": "timmy_turner",
+    "email": "timmy@turner.com",
+    "password": "IwishIhad&3abird",
+    "grade": "5"
+  },
+  {
+    "first_name": "Sandy",
+    "last_name": "Cheeks",
+    "username": "sandy_cheeks",
+    "email": "sandy@cheeks.com",
+    "password": "MadScIent1st!",
+    "grade": "6"
+  },
+  {
+    "first_name": "Mr.",
+    "last_name": "Burns",
+    "username": "mr_burns",
+    "email": "mr@burns.com",
+    "password": "IBr3atheEv!l",
+    "grade": "6"
+  },
+  {
+    "first_name": "Jimmy",
+    "last_name": "Neutron",
+    "username": "jimmy_neutron",
+    "email": "jimmy@neutron.com",
+    "password": "Sup3rGen!us",
+    "grade": "6"
+  },
+  {
+    "first_name": "Jake",
+    "last_name": "The Dog",
+    "username": "jake_the_dog",
+    "email": "jake@thedog.com",
+    "password": "Sl1nkey&1",
+    "grade": "7"
+  },
+  {
+    "first_name": "Lilo",
+    "last_name": "Pelekai",
+    "username": "lilo_pelekai",
+    "email": "lilo@pelekai.com",
+    "password": "Wh3resSt!tch?",
+    "grade": "7"
+  },
+  {
+    "first_name": "Johnny",
+    "last_name": "Bravo",
+    "username": "johnny_bravo",
+    "email": "johnny@bravo.com",
+    "password": "I4mMusc!e",
+    "grade": "7"
+  },
+  {
+    "first_name": "Inspector",
+    "last_name": "Gadget",
+    "username": "inspector_gadget",
+    "email": "inspector@gadget.com",
+    "password": "GogoG4dget!",
+    "grade": "8"
+  },
+  {
+    "first_name": "Gumball",
+    "last_name": "Watterson",
+    "username": "gumball_watterson",
+    "email": "gumball@watterson.com",
+    "password": "Haha!33455",
+    "grade": "8"
+  },
+  {
+    "first_name": "Angelica",
+    "last_name": "Pickles",
+    "username": "angelica_pickles",
+    "email": "angelica@pickles.com",
+    "password": "I4mBully#@",
+    "grade": "8"
+  }
+]

@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Colors",
+    "subject": "Arts",
+    "grade": "K"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "K"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "K"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "K"
+  },
+  {
+    "name": "Addition",
+    "subject": "Math",
+    "grade": "K"
+  },
+  {
+    "name": "Counting",
+    "subject": "Math",
+    "grade": "K"
+  },
+  {
+    "name": "Animals",
+    "subject": "Science",
+    "grade": "K"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "1"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "1"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "1"
+  },
+  {
+    "name": "Addition",
+    "subject": "Math",
+    "grade": "1"
+  },
+  {
+    "name": "Shapes",
+    "subject": "Math",
+    "grade": "1"
+  },
+  {
+    "name": "Weather",
+    "subject": "Science",
+    "grade": "1"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "1"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "2"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "2"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "2"
+  },
+  {
+    "name": "Subtraction",
+    "subject": "Math",
+    "grade": "2"
+  },
+  {
+    "name": "Shapes",
+    "subject": "Math",
+    "grade": "2"
+  },
+  {
+    "name": "Earth Science",
+    "subject": "Science",
+    "grade": "2"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "3"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "3"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "3"
+  },
+  {
+    "name": "Multiplication",
+    "subject": "Math",
+    "grade": "3"
+  },
+  {
+    "name": "Geometry",
+    "subject": "Math",
+    "grade": "3"
+  },
+  {
+    "name": "Earth Science",
+    "subject": "Science",
+    "grade": "3"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "3"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "4"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "4"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "4"
+  },
+  {
+    "name": "Division",
+    "subject": "Math",
+    "grade": "4"
+  },
+  {
+    "name": "Geometry",
+    "subject": "Math",
+    "grade": "4"
+  },
+  {
+    "name": "Earth Science",
+    "subject": "Science",
+    "grade": "4"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "4"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "5"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "5"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "5"
+  },
+  {
+    "name": "Multiplication",
+    "subject": "Math",
+    "grade": "5"
+  },
+  {
+    "name": "Geometry",
+    "subject": "Math",
+    "grade": "5"
+  },
+  {
+    "name": "Earth Science",
+    "subject": "Science",
+    "grade": "5"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "5"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "6"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "6"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "6"
+  },
+  {
+    "name": "Division",
+    "subject": "Math",
+    "grade": "6"
+  },
+  {
+    "name": "Geometry",
+    "subject": "Math",
+    "grade": "6"
+  },
+  {
+    "name": "Biology",
+    "subject": "Science",
+    "grade": "6"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "6"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "7"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "7"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "7"
+  },
+  {
+    "name": "Word Problems",
+    "subject": "Math",
+    "grade": "7"
+  },
+  {
+    "name": "Statistics",
+    "subject": "Math",
+    "grade": "7"
+  },
+  {
+    "name": "Chemistry",
+    "subject": "Science",
+    "grade": "7"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "7"
+  },
+  {
+    "name": "Grammar",
+    "subject": "English",
+    "grade": "8"
+  },
+  {
+    "name": "Spelling",
+    "subject": "English",
+    "grade": "8"
+  },
+  {
+    "name": "Vocabulary",
+    "subject": "English",
+    "grade": "8"
+  },
+  {
+    "name": "Graphs",
+    "subject": "Math",
+    "grade": "8"
+  },
+  {
+    "name": "Geometry",
+    "subject": "Math",
+    "grade": "8"
+  },
+  {
+    "name": "Physics",
+    "subject": "Science",
+    "grade": "8"
+  },
+  {
+    "name": "History",
+    "subject": "Social Studies",
+    "grade": "8"
+  }
+]
