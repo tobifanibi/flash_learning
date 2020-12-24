@@ -1,46 +1,48 @@
 
 <!-- Top Nav Bar  -->
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Flash Learning</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarText">
-    <ul class="navbar-nav mr-auto">
-    	<!-- Additional top bar links can go here -->
-    </ul>
-    
-    <!-- Log out Text in top right corner -->
-    <span class="navbar-text">
-      <a class="nav-link" href="#">Log Out</a>
-    </span>
-  </div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Flash Learning</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarText">
+		<ul class="navbar-nav mr-auto">
+			<!-- Additional top bar links can go here -->
+		</ul>
+		
+		<!-- Log out Text in top right corner -->
+		<span class="navbar-text">
+			<a class="nav-link" href="#">Log Out</a>
+		</span>
+	</div>
 </nav>
-
 
 <!-- Sidebar -->
 <div id="mySidebar" class="sidebar">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <a href="#">Home</a>
-  <a href="#">Profile</a>
-  <a href="#">Stats</a>
-  <a href="#">Leaderboard</a>
+	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+	<a href="#">Home</a>
+	<a href="#">Profile</a>
+	<a href="#">Stats</a>
+	<a href="#">Leaderboard</a>
 </div>
-
 
 <!-- Page Content -->
 <div id="main">
-  <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
-  <h2>Collapsed Sidebar</h2>
-  <p>Content...</p>
+	<button class="openbtn" onclick="openNav()">&#9776;</button>
 </div>
 
-
+<!-- Inherit from base template -->
 {% include 'base.html' %}
 
+<!-- Internal custom CSS -->
+<!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/student.css') }}">
 {% block head %}
-
 {% endblock %}
 
+<!-- Body goes here -->
 {% block body %}
 {% endblock %}
+
+<!-- Import local script to toggle sidebar -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/student.js') }}"></script>
