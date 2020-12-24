@@ -1,3 +1,5 @@
+
+
 <!-- Links to 'base_anon.html' as a base template file (which inherits from the base.html) -->
 {% extends 'base_anon.html' %}
 
@@ -7,7 +9,14 @@
 
 <!-- Jinja2 Template Block for Body of Webpage -->
 {% block body %}
+
 <div class="content">
-    <p1>Hmm, that page can't be found! We're sorry about that.</p1>
+
+    <div class="card text-center" style="width: 100%">
+      <div class="card-body">
+        <h5 class="card-title">Uh oh! That's a 404 error... </h5>
+        <p class="card-text">That page doesn't exist. We're sorry about that!</p>
+        <a href="/" class="btn btn-primary">Return Home</a>
+    </div>
 </div>
 {% endblock %}

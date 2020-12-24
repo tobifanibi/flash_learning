@@ -43,6 +43,12 @@ def login():
 
     return render_template("login.html", title="Sign In", form=form)
 
+@main.route("/error")
+def error_404():
+    """Creates route for 404 error page"""
+    return render_template("error.html", title="Flash Learning Error Page")
+
+
 
 @main.route("/logout")
 def logout():
