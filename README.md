@@ -3,4 +3,3 @@ Proposal: We will build a simple flashcard web app using Flask, aimed at incenti
 
 # Website
 https://learn-with-flash.herokuapp.com/
-
