@@ -51,16 +51,26 @@
     {% block head %}{% endblock %}
 </head>
 <body>
+
+    <!-- Boiler language for flashed messages  -->
+            {% with messages = get_flashed_messages() %}
+
+                <!-- Check for messages that are ready to display -->
+                {% if messages %}
+                    
+                    <!-- Iterate through all current messages -->
+                    {% for message in messages %}
+
+                        <!-- Add each message as paragraph tag -->
+                        <p>{{message}}</p>
+
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+
     <div id="page-container">  
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-        <ul>
-            {% for message in messages %}
-            <li>{{ message }}</li>
-            {% endfor %}
-        </ul>
-        {% endif %}
-        {%  endwith %}
+        
+                
 
         <main>
             <!-- Add Jinja2 syntax creating block in template for the body -->
