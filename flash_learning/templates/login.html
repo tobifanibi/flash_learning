@@ -8,6 +8,23 @@
 
 <!-- Jinja2 Template Block for Body of Webpage -->
 {% block body %}
+
+<!-- Boiler language for flashed messages  -->
+    {% with messages = get_flashed_messages() %}
+
+        <!-- Check for messages that are ready to display -->
+        {% if messages %}
+            
+            <!-- Iterate through all current messages -->
+            {% for message in messages %}
+
+                <!-- Add each message as paragraph tag -->
+                <p>{{message}}</p>
+
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
 <form action="" method="post" id="login" novalidate>
     {{ form.hidden_tag() }}
     <p>

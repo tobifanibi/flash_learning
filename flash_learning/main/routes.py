@@ -47,7 +47,12 @@ def login():
 @main.route("/logout")
 def logout():
     """Logout the current user."""
+
+    # Use Flask's base log out function to log out the user (manages sessions)
     logout_user()
+
+    # Flash the log out message
+    flash(f"You have been logged out!", "info")
 
     return redirect(url_for("main.index"))
 
