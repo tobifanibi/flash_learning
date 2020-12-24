@@ -52,6 +52,14 @@ def handle_404(err):
 def handle_500(err):
     return render_template("error.html", title="Flash Learning Error Page", error_code=500), 500
 
+# Add route to About page on main site
+@main.route('/about', methods=["GET", "POST"])
+def about():
+    """The app's about page."""
+    return render_template("about.html")
+
+
+# Add route to main page on main site via a logout
 @main.route("/logout")
 def logout():
     """Logout the current user."""
