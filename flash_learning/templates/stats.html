@@ -2,4 +2,7 @@
 {% block head %}
 {% endblock %}
 {% block body %}
+{% for score in scores %}
+        <div>{{ score.username }} : {{ score.points }}</div>
+    {% endfor %}
 {% endblock %}

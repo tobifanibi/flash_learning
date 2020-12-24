@@ -11,7 +11,35 @@ body {
 
 /* Updates the style for wrapper (used in navbar style) to fix width */
 .wrapper {
-    display: flex;
-    width: 100%;
+	display: flex;
+	width: 100%;
 }
 
+/* Style for main footer */
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	user-select: none;
+}
+
+/* Style for media images palceholder */
+@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+		font-size: 3.5rem;
+	}
+}
+
+/* Page container to lock main body above footer */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Footer styling to lock at bottom */
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}

@@ -26,7 +26,7 @@ class Student(UserMixin, db.Model):
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
     username = db.Column(db.String(64), index=True, unique=True)
-    grade = db.Column(db.Integer, index=True)
+    grade = db.Column(db.String(64), index=True)
     activated = db.Column(db.Boolean, default=False)
 
     def __init__(self, first_name, last_name, username, grade, email, password):

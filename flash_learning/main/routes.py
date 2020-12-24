@@ -13,7 +13,6 @@ from flash_learning.main.emailtask import create_confirmation_token, confirm_tok
 
 main = Blueprint("main", __name__)
 
-
 @main.route('/', methods=["GET", "POST"])
 def index():
     """The app's landing page."""
@@ -42,12 +41,26 @@ def login():
         return redirect(url_for("student.home", username=user.username))
 
     return render_template("login.html", title="Sign In", form=form)
+    
+"""Creates route for 404 error page"""
+@main.app_errorhandler(404)
+def handle_404(err):
+    return render_template("error.html", title="Flash Learning Error Page", error_code=404), 404
 
+"""Creates route for 500 error page"""
+@main.app_errorhandler(500)
+def handle_500(err):
+    return render_template("error.html", title="Flash Learning Error Page", error_code=500), 500
 
 @main.route("/logout")
 def logout():
     """Logout the current user."""
+
+    # Use Flask's base log out function to log out the user (manages sessions)
     logout_user()
+
+    # Flash the log out message
+    flash(f"You have been logged out!", "info")
 
     return redirect(url_for("main.index"))
 
