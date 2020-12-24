@@ -30,3 +30,16 @@ body {
 		font-size: 3.5rem;
 	}
 }
+
+/* Page container to lock main body above footer */
+#page-container {
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Footer styling to lock at bottom */
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
