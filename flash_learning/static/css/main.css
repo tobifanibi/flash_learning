@@ -8,3 +8,10 @@ body {
 	/* Set font family */
 	font-family: sans-serif;
 }
+
+/* Updates the style for wrapper (used in navbar style) to fix width */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+

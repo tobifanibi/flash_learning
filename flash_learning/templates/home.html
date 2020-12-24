@@ -1,5 +1,6 @@
-{% extends 'base.html' %}
+{% extends 'base_student.html' %}
 {% block head %}
+
 {% endblock %}
 {% block body %}
     <h1>Hello, {{ user.username }}</h1>
@@ -7,3 +8,4 @@
         <p>{{ subject.name }}</p>
     {% endfor %}
 {% endblock %}
+
