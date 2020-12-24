@@ -40,8 +40,14 @@
 {% endblock %}
 
 <!-- Body goes here -->
-{% block body %}
-{% endblock %}
+<div class="content">
+	<div class="card text-center" style="width: 100%">
+		<div class="card-body">
+			{% block body %}
+			{% endblock %}
+		</div>
+	</div>
+</div>
 
 <!-- Inherit from base template -->
 {% include 'base.html' %}
