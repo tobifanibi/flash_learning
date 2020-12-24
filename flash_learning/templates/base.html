@@ -7,13 +7,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Team Penguin: Mohamed Al-Hussein, Tobi Fanibi, Mark Doughten and Asa Holland">
+    <meta name="description" content="">
 	<meta http-equiv="X-UA-Compatible" content="ie-edge">
 
     <!-- add linked Bootstrap CSS CDN  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!-- Link to Bootstrap footer template -->
+    <link href="./Sticky Footer Template · Bootstrap v5.0_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
     <!-- Scrollbar Custom CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Style for footer -->
+    <link href="./Sticky Footer Template · Bootstrap v5.0_files/sticky-footer.css" rel="stylesheet">
 
     <!-- Internal custom CSS -->
     <!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
@@ -59,12 +76,66 @@
     <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 
 </body>
-<footer>
-    <p>Made by Team Penguin</p>
-    <p>Project repo can be found <a href="https://github.com/team-penguin-hackathon/flash_learning">here</a>.</p>
+
+<footer class="footer mt-auto py-3 bg-light">
+
+    <div class="container p-4">
+    <!--Grid row-->
+    <div class="row">
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">Home</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">About</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+
+      <!--Grid column-->
+      <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" class="text-dark">Get Started</a>
+          </li>
+        </ul>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+  <!-- Grid container -->
+
+
+  <div class="container text-center">
+    <span class="text-muted">
+    <p>Made by Team Penguin. Project repository can be found <a href="https://github.com/team-penguin-hackathon/flash_learning">here</a>.</p>
+</span>
+  </div>
 </footer>
-
-
-
 
 </html>
