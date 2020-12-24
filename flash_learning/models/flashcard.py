@@ -45,10 +45,12 @@ class Flashcard(db.Model):
     deck_id = db.Column(db.Integer, db.ForeignKey("deck.id"), nullable=False)
     number = db.Column(db.Integer, index=True)
     question = db.Column(db.String)
+    q_image = db.Column(db.String)
     answer = db.Column(db.String)
 
-    def __init__(self, number, question, answer, deck_id):
+    def __init__(self, number, question, answer, q_image, deck_id):
         self.number = number
         self.question = question
         self.answer = answer
+        self.q_image = q_image
         self.deck_id = deck_id
