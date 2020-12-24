@@ -52,6 +52,3 @@ class Flashcard(db.Model):
         self.question = question
         self.answer = answer
         self.deck_id = deck_id
-
-    def __repr__(self):
-        return f"{self.number}) {self.question} : {self.answer}"
