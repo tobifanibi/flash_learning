@@ -9,7 +9,7 @@
 		<ul class="navbar-nav mr-auto">
 			<!-- Additional top bar links can go here -->
 		</ul>
-		
+
 		<!-- Log out Text in top right corner -->
 		<span class="navbar-text">
 			<a class="nav-link" href="#">Log Out</a>
@@ -20,10 +20,10 @@
 <!-- Sidebar -->
 <div id="mySidebar" class="sidebar">
 	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-	<a href="#">Home</a>
-	<a href="#">Profile</a>
-	<a href="#">Stats</a>
-	<a href="#">Leaderboard</a>
+	<a href="/student/{{user}}/home">Home</a>
+	<a href="/student/{{user}}/profile">Profile</a>
+	<a href="/student/{{user}}/stats">Stats</a>
+	<a href="/student/{{user}}/leaderboard">Leaderboard</a>
 </div>
 
 <!-- Page Content -->
@@ -31,8 +31,7 @@
 	<button class="openbtn" onclick="openNav()">&#9776;</button>
 </div>
 
-<!-- Inherit from base template -->
-{% include 'base.html' %}
+
 
 <!-- Internal custom CSS -->
 <!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
@@ -43,6 +42,9 @@
 <!-- Body goes here -->
 {% block body %}
 {% endblock %}
+
+<!-- Inherit from base template -->
+{% include 'base.html' %}
 
 <!-- Import local script to toggle sidebar -->
 <script type="text/javascript" src="{{ url_for('static', filename='js/student.js') }}"></script>
