@@ -1,8 +1,22 @@
+
 {% extends 'base_student.html' %}
 {% block head %}
 {% endblock %}
 {% block body %}
+
 {% for score in scores %}
         <div>{{ score.username }} : {{ score.points }}</div>
     {% endfor %}
+
+<!-- Container for chart -->
+<div class="w-50 h-25 d-inline-block">
+	<canvas id="line-chart" width="400" height="400"></canvas>
+</div>
+
+
+<!-- External Links to Chart.js for displaying the chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+
+<!-- Internal script to run chart on page -->
+<script type="text/javascript" src="{{ url_for('static', filename='js/stats_graph.js') }}"></script>
 {% endblock %}
