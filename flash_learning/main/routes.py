@@ -59,6 +59,12 @@ def about():
     return render_template("about.html")
 
 
+# Add route to FAQ page on main site
+@main.route('/faq', methods=["GET", "POST"])
+def faq():
+    """The app's FAQ page."""
+    return render_template("faq.html")
+
 # Add route to main page on main site via a logout
 @main.route("/logout")
 def logout():
