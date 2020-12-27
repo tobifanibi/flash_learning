@@ -1,6 +1,10 @@
-
 {% extends 'base_student.html' %}
 {% block head %}
+
+<!-- Internal custom CSS -->
+<!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stats.css') }}">
+
 {% endblock %}
 {% block body %}
 
@@ -9,7 +13,7 @@
     {% endfor %}
 
 <!-- Container for chart -->
-<div class="w-50 h-25 d-inline-block">
+<div class="w-25 h-25 d-inline-block">
 	<canvas id="line-chart" width="400" height="400"></canvas>
 </div>
 
