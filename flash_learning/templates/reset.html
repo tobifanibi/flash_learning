@@ -1,0 +1,30 @@
+
+<!-- Links to 'base.html' as a base template file (this is where our default html boilerplate lives) -->
+{% extends 'base.html' %}
+
+<!-- Jinja2 Template Block for Head of Webpage -->
+{% block head %}
+{% endblock %}
+
+<!-- Jinja2 Template Block for Body of Webpage -->
+{% block body %}
+<form action="" method="post" id="reset" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.password.label }}: {{ form.password() }}<br>
+        {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.new_password.label }}: {{ form.new_password() }}<br>
+        {% for error in form.new_password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.submit() }}
+        {{ form.csrf_token }}
+    </p>
+</form>
+{% endblock %}

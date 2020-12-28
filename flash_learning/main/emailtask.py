@@ -14,4 +14,3 @@ def confirm_token(token,expiration=86400):
     return confirm
 
 
-
