@@ -1,13 +1,11 @@
 import os
 from flask import Blueprint, flash, redirect, render_template, request, url_for, session
-from flask_login import login_user, current_user, logout_user
-from werkzeug.urls import url_parse
-
+from flask_login import login_user, current_user, logout_user,login_required
 from flash_learning.models.student import Student
-from flash_learning.main.forms import LoginForm,SignupForm
+from flash_learning.main.forms import LoginForm,SignupForm, ResetForm
 from flash_learning import db
 from base64 import b64encode
-from flash_learning.main.emailtask import create_confirmation_token, confirm_token
+from werkzeug.urls import url_parse
 
 
 
@@ -18,6 +16,21 @@ main = Blueprint("main", __name__)
 def index():
     """The app's landing page."""
     return render_template("index.html")
+
+@main.route('/reset-password', methods=["GET", "POST"])
+@login_required
+def reset():
+    """"Student login page."""
+    if current_user.is_authenticated==False:
+        return redirect(url_for("main.index"))
+    form = ResetForm()
+    return render_template("reset.html", title="reset password", form=form)
+
+
+
+
+
+
 
 
 @main.route('/login', methods=["GET", "POST"])
@@ -52,49 +65,60 @@ def logout():
     return redirect(url_for("main.index"))
 
 
-@main.route('/signup', methods=['POST','GET'])
-def signup():
-    if current_user.is_authenticated:
-        return redirect(url_for("main.index"))
-
-    form = SignupForm()
-    if form.validate_on_submit():
-        user = Student(first_name=form.first_name.data,
-                       last_name=form.last_name.data,
-                       username=form.username.data,
-                       grade=form.grade.data,
-                       email=form.email.data,
-                       password=form.password.data)
-        alternative_id = b64encode(os.urandom(24)).decode('utf-8')
-        while Student.query.filter_by(alternative_id=alternative_id).first()!=None:
-            alternative_id = b64encode(os.urandom(24)).decode('utf-8')
-        user.set_password(form.password.data)
-        user.alternative_id=alternative_id
-        login_user(user, remember=False)
-        token = create_confirmation_token(user.email)
-        token="localhost:5000/confirm/"+token
-        db.session.add(user)
-        db.session.commit()
-        flash("Welcome to Flash Learning!")
-        flash(token)
-        return redirect(url_for("main.login"))
-    return render_template("signup.html", title="Sign Up", form=form)
-
-
-
-@main.route('/confirm/<token>', methods=['POST','GET'])
-def confirm_email(token):
-    try:
-        email = confirm_token(token)
-    except:
-        flash('This Confirmation Email has expired')
-        return redirect(url_for('main.index'))
-    user = Student.query.filter_by(email=email).first()
-    if user.activated:
-        flash('Account already confirmed. Please login.', 'success')
-    else:
-        user.activated = True
-        db.session.add(user)
-        db.session.commit()
-        flash('You have confirmed your account. Thanks!', 'success')
-    return redirect(url_for('main.index'))
+# @main.route('/signup', methods=['POST','GET'])
+# def signup():
+#     if current_user.is_authenticated:
+#         return redirect(url_for("main.index"))
+#
+#     form = SignupForm()
+#     if form.validate_on_submit():
+#         user = Student(first_name=form.first_name.data,
+#                        last_name=form.last_name.data,
+#                        username=form.username.data,
+#                        grade=form.grade.data,
+#                        email=form.email.data,
+#                        password=form.password.data)
+#         alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+#         while Student.query.filter_by(alternative_id=alternative_id).first()!=None:
+#             alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+#         user.set_password(form.password.data)
+#         user.alternative_id=alternative_id
+#         login_user(user, remember=False)
+#         token = create_confirmation_token(user.email)
+#         token="localhost:5000/confirm/"+token
+#         db.session.add(user)
+#         db.session.commit()
+#         flash("Welcome to Flash Learning!")
+#         flash(token)
+#         return redirect(url_for("main.login"))
+#     return render_template("signup.html", title="Sign Up", form=form)
+#
+#
+#
+# @main.route('/confirm/<token>', methods=['POST','GET'])
+# def confirm_email(token):
+#     try:
+#         email = confirm_token(token)
+#     except:
+#         flash('This Confirmation Email has expired')
+#         return redirect(url_for('main.index'))
+#     user = Student.query.filter_by(email=email).first()
+#     if user.activated:
+#         flash('Account already confirmed. Please login.', 'success')
+#     else:
+#         user.activated = True
+#         db.session.add(user)
+#         db.session.commit()
+#         flash('You have confirmed your account. Thanks!', 'success')
+#     return redirect(url_for('main.index'))
+#
+#
+# @main.route("/test22")
+# def index2():
+#     html = render_template('confirm.html')
+#     subject = "Please confirm your email"
+#     send_email("tobifanibi@gmail.com", subject, html)
+# def index2():
+#     html = render_template('confirm.html')
+#     subject = "Please confirm your email"
+#     send_email("tobifanibi@gmail.com", subject, html)
