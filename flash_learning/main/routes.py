@@ -139,13 +139,4 @@ def logout():
 #         flash('You have confirmed your account. Thanks!', 'success')
 #     return redirect(url_for('main.index'))
 #
-#
-# @main.route("/test22")
-# def index2():
-#     html = render_template('confirm.html')
-#     subject = "Please confirm your email"
-#     send_email("tobifanibi@gmail.com", subject, html)
-# def index2():
-#     html = render_template('confirm.html')
-#     subject = "Please confirm your email"
-#     send_email("tobifanibi@gmail.com", subject, html)
+
