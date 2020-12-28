@@ -1,0 +1,31 @@
+
+<!-- Links to 'base_anon.html' as a base template file (which inherits from the base.html) -->
+{% extends 'base_anon.html' %}
+
+<!-- Jinja2 Template Block for Head of Webpage -->
+{% block head %}
+{% endblock %}
+
+<!-- Jinja2 Template Block for Body of Webpage -->
+{% block body %}
+<div class="content">
+
+    <main role="main">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-4">About Flash Learning</h1>
+          <p> This site lets children from grades K through 8 review their school subjects with flashcards, compare their scores with other students, and explore additional topics beyond their current grade level. Log in begin, or register today!</p>
+          <div>
+              <a href="/login" class="btn btn-primary btn-lg">Log In</a>
+              <a href="/signup" class="btn btn-primary btn-lg">Register</a>
+            </div>
+        </div>
+      </div>
+
+    </main>
+	
+    <p1></p1>
+</div>
+{% endblock %}

@@ -1,0 +1,470 @@
+[
+  {
+    "number": 1,
+    "question": "What color is this?",
+    "answer": "black",
+    "q_image": "black.jpg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 2,
+    "question": "What color is this?",
+    "answer": "blue",
+    "q_image": "blue.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 3,
+    "question": "What color is this?",
+    "answer": "brown",
+    "q_image": "brown.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 4,
+    "question": "What color is this?",
+    "answer": "gold",
+    "q_image": "gold.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 5,
+    "question": "What color is this?",
+    "answer": "green",
+    "q_image": "green.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 6,
+    "question": "What color is this?",
+    "answer": "grey",
+    "q_image": "grey.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 7,
+    "question": "What color is this?",
+    "answer": "lilac",
+    "q_image": "lilac.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 8,
+    "question": "What color is this?",
+    "answer": "navy",
+    "q_image": "navy.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 9,
+    "question": "What color is this?",
+    "answer": "orange",
+    "q_image": "orange.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 10,
+    "question": "What color is this?",
+    "answer": "pink",
+    "q_image": "pink.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 11,
+    "question": "What color is this?",
+    "answer": "purple",
+    "q_image": "purple.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 12,
+    "question": "What color is this?",
+    "answer": "red",
+    "q_image": "red.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 13,
+    "question": "What color is this?",
+    "answer": "silver",
+    "q_image": "silver.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 14,
+    "question": "What color is this?",
+    "answer": "sky-blue",
+    "q_image": "sky-blue.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 15,
+    "question": "What color is this?",
+    "answer": "turquoise",
+    "q_image": "turquoise.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 16,
+    "question": "What color is this?",
+    "answer": "white",
+    "q_image": "white.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 17,
+    "question": "What color is this?",
+    "answer": "yellow",
+    "q_image": "yellow.jpeg",
+    "grade": "K",
+    "subject": "Arts",
+    "deck": "Colors"
+  },
+  {
+    "number": 1,
+    "question": "What is the position of the owl?",
+    "answer": "around",
+    "q_image": "around.jpg",
+    "grade": "K",
+    "subject": "English",
+    "deck": "Position"
+  },
+  {
+    "number": 2,
+    "question": "What is the position of the owl?",
+    "answer": "behind",
+    "q_image": "behind.jpg",
+    "grade": "K",
+    "subject": "English",
+    "deck": "Position"
+  },
+  {
+    "number": 3,
+    "question": "What is the position of the owl?",
+    "answer": "between",
+    "q_image": "between.jpg",
+    "grade": "K",
+    "subject": "English",
+    "deck": "Position"
+  },
+  {
+    "number": 4,
+    "question": "What is the position of the owl?",
+    "answer": "front",
+    "q_image": "front.jpg",
+    "grade": "K",
+    "subject": "English",
+    "deck": "Position"
+  },
+  {
+    "number": 5,
+    "question": "What is the position of the owl?",
+    "answer": "over",
+    "q_image": "over.jpg",
+    "grade": "K",
+    "subject": "English",
+    "deck": "Position"
+  },
+  {
+    "number": 6,
+    "question": "What is the position of the owl?",
+    "answer": "under",
+    "q_image": "under.jpg",
+    "grade": "K",
+    "subject": "English",
+    "deck": "Position"
+  },
+  {
+    "number": 1,
+    "question": "What is the name of this shape?",
+    "answer": "circle",
+    "q_image": "circle.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 2,
+    "question": "What is the name of this shape?",
+    "answer": "crescent",
+    "q_image": "crescent.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 3,
+    "question": "What is the name of this shape?",
+    "answer": "diamond",
+    "q_image": "diamond.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 4,
+    "question": "What is the name of this shape?",
+    "answer": "heart",
+    "q_image": "heart.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 5,
+    "question": "What is the name of this shape?",
+    "answer": "hexagon",
+    "q_image": "hexagon.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 6,
+    "question": "What is the name of this shape?",
+    "answer": "oval",
+    "q_image": "oval.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 7,
+    "question": "What is the name of this shape?",
+    "answer": "pentagon",
+    "q_image": "pentagon.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 8,
+    "question": "What is the name of this shape?",
+    "answer": "rectangle",
+    "q_image": "rectangle.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 9,
+    "question": "What is the name of this shape?",
+    "answer": "square",
+    "q_image": "square.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 10,
+    "question": "What is the name of this shape?",
+    "answer": "star",
+    "q_image": "star.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 11,
+    "question": "What is the name of this shape?",
+    "answer": "triangle",
+    "q_image": "triangle.jpeg",
+    "grade": "K",
+    "subject": "Math",
+    "deck": "Shapes"
+  },
+  {
+    "number": 1,
+    "question": "What is the name of this animal?",
+    "answer": "ant",
+    "q_image": "ant.jpg",
+    "grade": "K",
+    "subject": "Science",
+    "deck": "Animals"
+  },
+  {
+    "number": 2,
+    "question": "What is the name of this animal?",
+    "answer": "bear",
+    "q_image": "bear.jpg",
+    "grade": "K",
+    "subject": "Science",
+    "deck": "Animals"
+  },
+  {
+    "number": 3,
+    "question": "What is the name of this animal?",
+    "answer": "bee",
+    "q_image": "bee.jpg",
+    "grade": "K",
+    "subject": "Science",
+    "deck": "Animals"
+  },
+  {
+    "number": 4,
+    "question": "What is the name of this animal?",
+    "answer": "camel",
+    "q_image": "camel.jpg",
+    "grade": "K",
+    "subject": "Science",
+    "deck": "Animals"
+  },
+  {
+    "number": 5,
+    "question": "What is the name of this animal?",
+    "answer": "dog",
+    "q_image": "dog.jpg",
+    "grade": "K",
+    "subject": "Science",
+    "deck": "Animals"
+  },
+  {
+    "number": 6,
+    "question": "What is the name of this animal?",
+    "answer": "fly",
+    "q_image": "fly.jpg",
+    "grade": "K",
+    "subject": "Science",
+    "deck": "Animals"
+  },
+  {
+    "number": 1,
+    "question": "Is it living or non living?",
+    "answer": "living",
+    "q_image": "bird.PNG",
+    "grade": "1",
+    "subject": "English",
+    "deck": "Animate"
+  },
+  {
+    "number": 2,
+    "question": "Is it living or non living?",
+    "answer": "nonliving",
+    "q_image": "boot.PNG",
+    "grade": "1",
+    "subject": "English",
+    "deck": "Animate"
+  },
+  {
+    "number": 3,
+    "question": "Is it living or non living?",
+    "answer": "nonliving",
+    "q_image": "schoolbus.PNG",
+    "grade": "1",
+    "subject": "English",
+    "deck": "Animate"
+  },
+  {
+    "number": 4,
+    "question": "Is it living or non living?",
+    "answer": "nonliving",
+    "q_image": "snowman.PNG",
+    "grade": "1",
+    "subject": "English",
+    "deck": "Animate"
+  },
+  {
+    "number": 5,
+    "question": "Is it living or non living?",
+    "answer": "living",
+    "q_image": "tree.PNG",
+    "grade": "1",
+    "subject": "English",
+    "deck": "Animate"
+  },
+  {
+    "number": 6,
+    "question": "Is it living or non living?",
+    "answer": "nonliving",
+    "q_image": "umbrella.PNG",
+    "grade": "1",
+    "subject": "English",
+    "deck": "Animate"
+  },
+  {
+    "number": 1,
+    "question": "How much is the total?",
+    "answer": "10 cents",
+    "q_image": "10.PNG",
+    "grade": "1",
+    "subject": "Math",
+    "deck": "Nickels"
+  },
+  {
+    "number": 2,
+    "question": "How much is the total?",
+    "answer": "15 cents",
+    "q_image": "15.PNG",
+    "grade": "1",
+    "subject": "Math",
+    "deck": "Nickels"
+  },
+  {
+    "number": 3,
+    "question": "How much is the total?",
+    "answer": "25 cents",
+    "q_image": "25.PNG",
+    "grade": "1",
+    "subject": "Math",
+    "deck": "Nickels"
+  },
+  {
+    "number": 4,
+    "question": "How much is the total?",
+    "answer": "30 cents",
+    "q_image": "30.PNG",
+    "grade": "1",
+    "subject": "Math",
+    "deck": "Nickels"
+  },
+  {
+    "number": 5,
+    "question": "How much is the total?",
+    "answer": "40 cents",
+    "q_image": "40.PNG",
+    "grade": "1",
+    "subject": "Math",
+    "deck": "Nickels"
+  },
+  {
+    "number": 6,
+    "question": "How much is the total?",
+    "answer": "50 cents",
+    "q_image": "50.PNG",
+    "grade": "1",
+    "subject": "Math",
+    "deck": "Nickels"
+  }
+]

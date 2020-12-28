@@ -1,6 +1,6 @@
 
-<!-- Links to 'base.html' as a base template file (this is where our default html boilerplate lives) -->
-{% extends 'base.html' %}
+<!-- Links to 'base_anon.html' as a base template file (which inherits from the base.html) -->
+{% extends 'base_anon.html' %}
 
 <!-- Jinja2 Template Block for Head of Webpage -->
 {% block head %}
@@ -23,7 +23,7 @@
 <!-- Jinja2 Template Block for Body of Webpage -->
 {% block body %}
 <div class="content">
-	<h1>Flash Learning</h1>
+	
     <p1>Welcome to Flash Learning! This site lets children from grades K through 8 to review their school subjects with
         flashcards, compare their scores with other students, and explore additional topics beyond their current grade
         level. Register today!</p1>
