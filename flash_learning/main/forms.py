@@ -3,12 +3,6 @@ from wtforms import StringField, PasswordField, SubmitField, IntegerField
 from wtforms.validators import DataRequired, Email, ValidationError
 from flash_learning.models.student import Student
 import re
-
-
-class LoginForm(FlaskForm):
-    username = StringField('username', validators=[DataRequired()])
-    password = PasswordField('password', validators=[DataRequired()])
-    submit = SubmitField("Sign In")
 def check_password(form, field):
     if len(field.data) < 8:
         raise ValidationError('Password must greater than 4 character')
@@ -51,6 +45,19 @@ def check_password(form, field):
         raise ValidationError("Password Can Not Contain First Name")
     if re.search(form.last_name.data,field.data,re.IGNORECASE)!=None:
         raise ValidationError("Password Can Not Last Name")
+
+class LoginForm(FlaskForm):
+    username = StringField('username', validators=[DataRequired()])
+    password = PasswordField('password', validators=[DataRequired()])
+    submit = SubmitField("Sign In")
+
+class ResetForm(FlaskForm):
+    password = StringField('password', validators=[DataRequired(),check_password])
+    new_password = PasswordField('new_password', validators=[DataRequired(),check_password])
+    submit = SubmitField("Reset")
+
+
+
 
 class SignupForm(FlaskForm):
     first_name = StringField('first_name', validators=[DataRequired()])

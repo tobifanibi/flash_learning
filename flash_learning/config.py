@@ -14,4 +14,12 @@ class Config:
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     PERMANENT_SESSION_LIFETIME = timedelta(minutes=10)
     REMEMBER_COOKIE_DURATION = timedelta(weeks=162)
+    MAIL_USERNAME = "flashlearning2020@outlook.com"
+    MAIL_PASSWORD= "#U9Qt2Jt$p"
+    MAIL_DEFAULT_SENDER = 'flashlearning2020@outlook.com'
+    MAIL_SERVER = "smtp.office365.com"
+    MAIL_USE_TLS = True
+    MAIL_PORT = 587
+    MAIL_USE_SSL = False
+
 
