@@ -1,6 +1,10 @@
 
 // Create new line chart using chart.js
-new Chart(document.getElementById("line-chart"), {
+var ctx = document.getElementById("line-chart");
+
+var myChart = new Chart(ctx, {
+
+  // Set chart type to line
   type: 'line',
   data: {
 
@@ -14,8 +18,12 @@ new Chart(document.getElementById("line-chart"), {
     { 
         data: [0,0,22,24,56,24,26,96,87,81, 56, 34],
         label: "Your Score",
-        borderColor: "#3e95cd",
-        fill: false
+        fill: false,
+        lineTension: 0,
+        backgroundColor: 'transparent',
+        borderColor: '#007bff',
+        borderWidth: 4,
+        pointBackgroundColor: '#007bff'
       }
     ]
   },
@@ -25,6 +33,18 @@ new Chart(document.getElementById("line-chart"), {
     title: {
       display: true,
       text: 'Number of Successful Flaschcards Learned Per Month'
+    }, 
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: false
+        }
+      }]
+    },
+    legend: {
+      display: false,
     }
   }
 });
+
+

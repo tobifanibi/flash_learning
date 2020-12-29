@@ -1,26 +1,57 @@
 {% extends 'base_student.html' %}
+
 {% block head %}
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<!-- Internal custom CSS -->
-<!-- Can't link directly to static/css/main.css using templates, have to use url_for instead -->
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stats.css') }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Team Penguin">
+  <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
 
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/dashboard/">
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='stats_charts/bootstrap.min.css') }}">
+
+  <!-- Custom styles for this template -->
+  <style type="text/css">/* Chart.js */
+
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
 {% endblock %}
+
 {% block body %}
 
-{% for score in scores %}
-        <div>{{ score.username }} : {{ score.points }}</div>
-    {% endfor %}
+  <div class="container-fluid">
+    <div class="justify-content-center row ">
 
-<!-- Container for chart -->
-<div class="w-25 h-25 d-inline-block">
-	<canvas id="line-chart" width="400" height="400"></canvas>
-</div>
+      <main role="main" class="col-lg-10 pt-3 px-4"><div class="chartjs-size-monitor" style="position: absolute; inset: 0px; overflow: hidden; pointer-events: none; visibility: hidden; z-index: -1;"><div class="chartjs-size-monitor-expand" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:1000000px;height:1000000px;left:0;top:0"></div></div><div class="chartjs-size-monitor-shrink" style="position:absolute;left:0;top:0;right:0;bottom:0;overflow:hidden;pointer-events:none;visibility:hidden;z-index:-1;"><div style="position:absolute;width:200%;height:200%;left:0; top:0"></div></div></div>
 
 
-<!-- External Links to Chart.js for displaying the chart -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+        <canvas class="my-4 chartjs-render-monitor" id="line-chart" width="614" height="259" style="display: block; width: 614px; height: 259px;"></canvas>
+      </main>
+    </div>
+  </div>
 
-<!-- Internal script to run chart on page -->
-<script type="text/javascript" src="{{ url_for('static', filename='js/stats_graph.js') }}"></script>
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+      <!-- Placed at the end of the document so the pages load faster -->
+      <script type="text/javascript" src="{{ url_for('static', filename='stats_charts/jquery-3.2.1.slim.min.js.download') }}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      
+    
+      <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+      <script type="text/javascript" src="{{ url_for('static', filename='stats_charts/popper.min.js.download') }}"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='stats_charts/bootstrap.min.js.download') }}"></script>
+
+      <!-- Icons -->
+      <script type="text/javascript" src="{{ url_for('static', filename='stats_charts/feather.min.js.download') }}"></script>
+      <script>
+        feather.replace()
+      </script>
+
+      <!-- Graphs -->
+      <script type="text/javascript" src="{{ url_for('static', filename='stats_charts/Chart.min.js.download') }}"></script>
+      <script type="text/javascript" src="{{ url_for('static', filename='js/stats_graph.js') }}"></script>
+
+
 {% endblock %}
