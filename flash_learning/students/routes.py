@@ -31,11 +31,15 @@ def profile(username):
 @login_required
 def stats(username):
     student = Student.query.filter_by(username=current_user.username).first()
-    return render_template("stats.html", title="Stats", user=student)
+    score = current_user.points
+    return render_template("stats.html", title="Stats", user=student, score=score)
 
 
 @students.route("/student/<username>/leaderboard", methods=["GET"])
 @login_required
 def leaderboard(username):
     student = Student.query.filter_by(username=current_user.username).first()
+
+    # Returns the top 10 scores of the Stats database in descending order.
+    scores = Student.query.order_by(Student.points.desc()).limit(10).all()
     return render_template("leaderboard.html", title="Leaderboard", scores=scores)

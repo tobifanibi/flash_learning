@@ -6,6 +6,7 @@ from flash_learning.models.flashcard import Grade, Subject, Flashcard, Deck
 from flash_learning.models.student import Student
 
 
+
 class DummyData:
     """Generate a set of dummy data to populate the site's database."""
 
@@ -83,7 +84,8 @@ class DummyData:
                         username=student["username"],
                         grade=student["grade"],
                         email=student["email"],
-                        password=student["password"])
+                        password=student["password"],
+                        points=student["points"])
             db.session.add(u)
             db.session.commit()
 

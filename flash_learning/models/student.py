@@ -3,6 +3,7 @@ from base64 import b64encode
 
 from werkzeug.security import check_password_hash, generate_password_hash
 
+
 from flash_learning import db, login_manager
 from flask_login import UserMixin
 
@@ -28,8 +29,9 @@ class Student(UserMixin, db.Model):
     username = db.Column(db.String(64), index=True, unique=True)
     grade = db.Column(db.String(64), index=True)
     activated = db.Column(db.Boolean, default=False)
+    points = db.Column(db.Integer, default=0, index=True)
 
-    def __init__(self, first_name, last_name, username, grade, email, password):
+    def __init__(self, first_name, last_name, username, grade, email, password, points):
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
@@ -37,6 +39,7 @@ class Student(UserMixin, db.Model):
         self.grade = grade
         self.set_password(password)
         self.alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+        self.points = points
 
     def __repr__(self):
         return f"<User {self.username}>"
