@@ -78,7 +78,7 @@ def signup():
         user.alternative_id=alternative_id
         login_user(user, remember=False)
         token = create_confirmation_token(user.email)
-        confirm_url = url_for('email.confirm_email', token=token, _exmternal=True)
+        confirm_url = url_for('email.confirm_email', token=token, _external=True)
         html = render_template('confirm.html', confirm_url=confirm_url)
         subject = "Please confirm your email"
         send_email(user.email, subject, html)
