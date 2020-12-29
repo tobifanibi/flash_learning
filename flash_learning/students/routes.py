@@ -39,6 +39,6 @@ def stats(username):
 def leaderboard(username):
     student = Student.query.filter_by(username=current_user.username).first()
 
-    # Returns the top 10 scores of the Stats database
-    scores = Student.query.order_by(Student.points).limit(10).all()
+    # Returns the top 10 scores of the Stats database in descending order.
+    scores = Student.query.order_by(Student.points.desc()).limit(10).all()
     return render_template("leaderboard.html", title="Leaderboard", scores=scores)
