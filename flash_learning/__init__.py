@@ -9,9 +9,6 @@ from flash_learning.config import Config
 db = SQLAlchemy()
 login_manager = LoginManager()
 login_manager.login_view = "main.login"
-
-
-
 def create_app(config_class: Type[Config] = Config) -> Flask:
     """
     Create an instance of the flask app; update its configuration; spins up the app's database; attaches to the login
@@ -20,7 +17,6 @@ def create_app(config_class: Type[Config] = Config) -> Flask:
     :param config_class: Configuration parameters.
     :return: The flask app.
     """
-
     # Create an instance of the flask app and set the app's configuration.
     app = Flask(__name__)
     app.config.from_object(config_class)
@@ -33,6 +29,7 @@ def create_app(config_class: Type[Config] = Config) -> Flask:
     # Register blueprints (routes).
     from flash_learning.main.routes import main
     from flash_learning.students.routes import students
+
     app.register_blueprint(main)
     app.register_blueprint(students)
 
