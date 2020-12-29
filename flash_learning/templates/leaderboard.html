@@ -5,7 +5,29 @@
 {% block head %}
 {% endblock %}
 {% block body %}
-    {% for score in scores %}
-        <div>{{ score.username }} : {{ score.points }}</div>
-    {% endfor %}
+<h3>Top 10 High Scores</h3>
+
+<div class="w-50 d-inline-block">
+	<div class="table-responsive">
+		<table class="table table-striped table-bordered table-hover table-sm">
+			<thead class="thead-dark">
+				<tr>
+					<th scope="col">#</th>
+					<th scope="col">Username</th>
+					<th scope="col">Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for score in scores %}
+				<tr>
+					<th scope="row">{{loop.index}}</th>
+					<td>{{ score.username }}</td>
+					<td>{{ score.points }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+
 {% endblock %}
