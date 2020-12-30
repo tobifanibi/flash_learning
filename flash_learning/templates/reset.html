@@ -9,19 +9,12 @@
 <!-- Jinja2 Template Block for Body of Webpage -->
 {% block body %}
 <form action="" method="post" id="reset" novalidate>
-  <label for="first_name">first_name:</label>
-  <input readonly type="text" id="first_name" name="first_name" value={{ current_user.first_name}}><br><br>
-
-
-  <label for="last_name">last_name:</label>
-  <input readonly type="text" id="last_name" name="last_name" value={{ current_user.last_name}}><br><br>
+  <input readonly type="hidden" id="first_name" name="first_name" value={{ current_user.first_name}}>
+  <input readonly type="hidden" id="last_name" name="last_name" value={{ current_user.last_name}}>
 
 
   <label for="username">username:</label>
   <input readonly type="text" id="username" name="username" value={{ current_user.username }}><br><br>
-
-  <label for="first_name">first_name:</label>
-  <input readonly type="text" id="first_name" name="first_name" value={{ current_user.first_name}}><br><br>
   {{ form.hidden_tag() }}
   <p>
       {{ form.password.label }}: {{ form.password() }}<br>

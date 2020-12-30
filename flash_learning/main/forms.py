@@ -52,7 +52,7 @@ class LoginForm(FlaskForm):
     submit = SubmitField("Sign In")
 
 class ResetForm(FlaskForm):
-    password = StringField('password', validators=[DataRequired()])
+    password = PasswordField('password', validators=[DataRequired()])
     new_password = PasswordField('new_password', validators=[DataRequired(),check_password])
     username = StringField('username', validators=[DataRequired()])
     first_name = StringField('first_name', validators=[DataRequired()])

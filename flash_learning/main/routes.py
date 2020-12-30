@@ -25,7 +25,12 @@ def reset():
     form = ResetForm()
     if form.validate_on_submit():
         if not current_user.check_password(form.password.data):
-            flash("Invalid username or password")
+            flash("old password is invalid")
+            return render_template("reset.html", title="reset password", form=form,current_user=current_user)
+
+        if current_user.check_password(form.password.data)==current_user.check_password(form.new_password.data):
+            flash("Password Can not be the same")
+            return render_template("reset.html", title="reset password", form=form,current_user=current_user)
         current_user.set_password(form.new_password.data)
         db.session.commit()
         flash("Password Changed")
