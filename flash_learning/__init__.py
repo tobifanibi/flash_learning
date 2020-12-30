@@ -26,6 +26,7 @@ def create_app(config_class: Type[Config] = Config) -> Flask:
     # Attach the login manager to the app.
     login_manager.init_app(app)
 
+
     # Register blueprints (routes).
     from flash_learning.main.routes import main
     from flash_learning.students.routes import students
