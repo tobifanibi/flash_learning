@@ -29,7 +29,9 @@ def home(username):
 @login_required
 def profile(username):
     student = Student.query.filter_by(username=current_user.username).first()
-    return render_template("profile.html", title="Profile", user=student)
+    school_value = Student.query.filter_by(username=current_user.school).first()
+    school_name = school_value if school_value else 'None'
+    return render_template("profile.html", title="Profile", user=student, school_name = school_name)
 
 
 @students.route("/student/<username>/stats", methods=["GET"])

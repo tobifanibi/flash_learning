@@ -26,6 +26,7 @@ class Student(UserMixin, db.Model):
     password = db.Column(db.String(128))
     first_name = db.Column(db.String)
     last_name = db.Column(db.String)
+    school = db.Column(db.String, default='')
     username = db.Column(db.String(64), index=True, unique=True)
     grade = db.Column(db.String(64), index=True)
     activated = db.Column(db.Boolean, default=False)
@@ -33,12 +34,13 @@ class Student(UserMixin, db.Model):
     flashcards_attempted = db.Column(db.Integer, default=0, index=True)
     flashcards_correct = db.Column(db.Integer, default=0, index=True)
 
-    def __init__(self, first_name, last_name, username, grade, email, password, points, flashcards_attempted, flashcards_correct):
+    def __init__(self, first_name, last_name, username, grade, email, password, points, flashcards_attempted, flashcards_correct, school=''):
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
         self.email = email
         self.grade = grade
+        self.school = school
         self.set_password(password)
         self.alternative_id = b64encode(os.urandom(24)).decode('utf-8')
         self.points = points
