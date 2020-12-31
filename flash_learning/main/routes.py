@@ -23,7 +23,23 @@ def reset():
     if current_user.is_authenticated==False:
         return redirect(url_for("main.index"))
     form = ResetForm()
-    return render_template("reset.html", title="reset password", form=form)
+    if form.validate_on_submit():
+        if not current_user.check_password(form.password.data):
+            flash("old password is invalid")
+            return render_template("reset.html", title="reset password", form=form,current_user=current_user)
+
+        if current_user.check_password(form.password.data)==current_user.check_password(form.new_password.data):
+            flash("Password Can not be the same")
+            return render_template("reset.html", title="reset password", form=form,current_user=current_user)
+        current_user.set_password(form.new_password.data)
+        db.session.commit()
+        flash("Password Changed")
+        return render_template("index.html")
+
+    return render_template("reset.html", title="reset password", form=form,current_user=current_user)
+    print(form.validate_on_submit)
+
+
 
 
 
@@ -54,7 +70,7 @@ def login():
         return redirect(url_for("student.home", username=user.username))
 
     return render_template("login.html", title="Sign In", form=form)
-    
+
 """Creates route for 404 error page"""
 @main.app_errorhandler(404)
 def handle_404(err):
@@ -139,4 +155,3 @@ def logout():
 #         flash('You have confirmed your account. Thanks!', 'success')
 #     return redirect(url_for('main.index'))
 #
-
