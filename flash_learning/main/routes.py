@@ -1,26 +1,29 @@
 import os
+from base64 import b64encode
+
 from flask import Blueprint, flash, redirect, render_template, request, url_for, session
 from flask_login import login_user, current_user, logout_user,login_required
+
+from flash_learning.main.emailtask import create_confirmation_token, confirm_token
 from flash_learning.models.student import Student
-from flash_learning.main.forms import LoginForm,SignupForm, ResetForm
+from flash_learning.main.forms import LoginForm, ResetForm, SignupForm
 from flash_learning import db
-from base64 import b64encode
-from werkzeug.urls import url_parse
-
-
 
 main = Blueprint("main", __name__)
+
 
 @main.route('/', methods=["GET", "POST"])
 def index():
     """The app's landing page."""
     return render_template("index.html")
 
+
 @main.route('/reset-password', methods=["GET", "POST"])
 @login_required
 def reset():
     """"Student login page."""
-    if current_user.is_authenticated==False:
+
+    if not current_user.is_authenticated:
         return redirect(url_for("main.index"))
     form = ResetForm()
     if form.validate_on_submit():
@@ -37,15 +40,8 @@ def reset():
         return render_template("index.html")
 
     return render_template("reset.html", title="reset password", form=form,current_user=current_user)
+
     print(form.validate_on_submit)
-
-
-
-
-
-
-
-
 
 
 @main.route('/login', methods=["GET", "POST"])
@@ -62,8 +58,8 @@ def login():
         if user is None or not user.check_password(form.password.data):
             flash("Invalid username or password")
             return redirect(url_for("main.login"))
-        if request.form.get('remember')!=None:
-            login_user(user,remember=True)
+        if request.form.get('remember') is not None:
+            login_user(user, remember=True)
         else:
             session.permanent = True
             login_user(user)
@@ -71,15 +67,20 @@ def login():
 
     return render_template("login.html", title="Sign In", form=form)
 
-"""Creates route for 404 error page"""
+
 @main.app_errorhandler(404)
 def handle_404(err):
+    """Creates route for 404 error page"""
+
     return render_template("error.html", title="Flash Learning Error Page", error_code=404), 404
 
-"""Creates route for 500 error page"""
+
 @main.app_errorhandler(500)
 def handle_500(err):
+    """Creates route for 500 error page"""
+
     return render_template("error.html", title="Flash Learning Error Page", error_code=500), 500
+
 
 # Add route to About page on main site
 @main.route('/about', methods=["GET", "POST"])
@@ -92,7 +93,9 @@ def about():
 @main.route('/faq', methods=["GET", "POST"])
 def faq():
     """The app's FAQ page."""
+
     return render_template("faq.html")
+
 
 # Add route to main page on main site via a logout
 @main.route("/logout")
@@ -108,50 +111,48 @@ def logout():
     return redirect(url_for("main.index"))
 
 
-# @main.route('/signup', methods=['POST','GET'])
-# def signup():
-#     if current_user.is_authenticated:
-#         return redirect(url_for("main.index"))
-#
-#     form = SignupForm()
-#     if form.validate_on_submit():
-#         user = Student(first_name=form.first_name.data,
-#                        last_name=form.last_name.data,
-#                        username=form.username.data,
-#                        grade=form.grade.data,
-#                        email=form.email.data,
-#                        password=form.password.data)
-#         alternative_id = b64encode(os.urandom(24)).decode('utf-8')
-#         while Student.query.filter_by(alternative_id=alternative_id).first()!=None:
-#             alternative_id = b64encode(os.urandom(24)).decode('utf-8')
-#         user.set_password(form.password.data)
-#         user.alternative_id=alternative_id
-#         login_user(user, remember=False)
-#         token = create_confirmation_token(user.email)
-#         token="localhost:5000/confirm/"+token
-#         db.session.add(user)
-#         db.session.commit()
-#         flash("Welcome to Flash Learning!")
-#         flash(token)
-#         return redirect(url_for("main.login"))
-#     return render_template("signup.html", title="Sign Up", form=form)
-#
-#
-#
-# @main.route('/confirm/<token>', methods=['POST','GET'])
-# def confirm_email(token):
-#     try:
-#         email = confirm_token(token)
-#     except:
-#         flash('This Confirmation Email has expired')
-#         return redirect(url_for('main.index'))
-#     user = Student.query.filter_by(email=email).first()
-#     if user.activated:
-#         flash('Account already confirmed. Please login.', 'success')
-#     else:
-#         user.activated = True
-#         db.session.add(user)
-#         db.session.commit()
-#         flash('You have confirmed your account. Thanks!', 'success')
-#     return redirect(url_for('main.index'))
-#
+@main.route('/signup', methods=['POST','GET'])
+def signup():
+    if current_user.is_authenticated:
+        return redirect(url_for("main.index"))
+
+    form = SignupForm()
+    if form.validate_on_submit():
+        user = Student(first_name=form.first_name.data,
+                       last_name=form.last_name.data,
+                       username=form.username.data,
+                       grade=form.grade.data,
+                       email=form.email.data,
+                       password=form.password.data)
+        alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+        while Student.query.filter_by(alternative_id=alternative_id).first() is not None:
+            alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+        user.set_password(form.password.data)
+        user.alternative_id=alternative_id
+        login_user(user, remember=False)
+        token = create_confirmation_token(user.email)
+        token="localhost:5000/confirm/"+token
+        db.session.add(user)
+        db.session.commit()
+        flash("Welcome to Flash Learning!")
+        flash(token)
+        return redirect(url_for("main.login"))
+    return render_template("signup.html", title="Sign Up", form=form)
+
+
+@main.route('/confirm/<token>', methods=['POST','GET'])
+def confirm_email(token):
+    try:
+        email = confirm_token(token)
+    except:
+        flash('This Confirmation Email has expired')
+        return redirect(url_for('main.index'))
+    user = Student.query.filter_by(email=email).first()
+    if user.activated:
+        flash('Account already confirmed. Please login.', 'success')
+    else:
+        user.activated = True
+        db.session.add(user)
+        db.session.commit()
+        flash('You have confirmed your account. Thanks!', 'success')
+    return redirect(url_for('main.index'))
