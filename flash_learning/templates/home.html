@@ -13,7 +13,7 @@
 
 <div class="w-100">
 	<div class="row w-100">
-	    <div class="col-4 border">
+	    <div class="col-4">
 	        <div class="row">
 	            <div class="col-md-6 border">
 	                <div class="well"><h5>Subjects</h5></div>
@@ -24,22 +24,32 @@
 	        </div>
 	        <div class="row">
 	        	<div class="d-md-flex w-100">
+
 				<div class="overflow-auto col-md-6 border w-100" style="max-height: 300px;">
-				{% for subject in subjects %}
-					<p>{{ subject.name }}</p>
-				{% endfor %}
+					<div class="list-group">
+						{% for subject in subjects %}
+							<a href="#" class="list-group-item list-group-item-action">{{ subject.name }}</a>
+						{% endfor %}
+					</div>
 				</div>
+
 				<div class="overflow-auto col-md-6 border w-100" style="max-height: 300px;">
-				{% for x in range(50) %}
-					<p>Deck {{ x }}</p>
-				{% endfor %}
+					<div class="list-group">
+						{% for x in range(50) %}
+							<a href="#" class="list-group-item list-group-item-action">Deck {{ x }}</a>
+						{% endfor %}
+					</div>
+				</div>
+
+				<div class="overflow-auto col-md-6 border w-100" style="max-height: 300px;">
+				
 				</div>
 </div>
 
 	           
 	        </div>
 	    </div>
-	    <div class="col-md-8 border">
+	    <div class="col-md-8">
 
 	    	<div class="card text-center">
 	    		<div class="card-header">
