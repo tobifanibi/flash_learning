@@ -36,14 +36,11 @@ def profile(username):
     school_value = Student.query.filter_by(username=current_user.school).first()
     school_name = school_value if school_value else 'None'
 
-    # Obtain the student grade, and format the string appropriately
-    raw_grade = Student.query.filter_by(username=current_user.grade).first()
-
     # Create a dictionary of shorthand grade levels used by the database and human readable equivalents to display on the UI
     grade_conversion = {'K': 'Kindergarden', '1': '1st', '2': '2nd', '3': '3rd', '4': '4th', '5': '5th', '6': '6th', '7': '7th', '8': '8th'}
 
     # Convert raw student grade in the database to human readable equivalent, else default to the raw grade
-    grade = grade_conversion[raw_grade] if raw_grade in grade_conversion else raw_grade
+    grade = grade_conversion[current_user.grade] if current_user.grade in grade_conversion else current_user.grade
 
     return render_template("profile.html", title="Profile", user=student, school_name = school_name, grade=grade)
 
