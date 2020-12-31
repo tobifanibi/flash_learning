@@ -1,5 +1,10 @@
 /* main.css */
 
+/* Adds main core color to be referenced in multiple other locations */
+:root {
+	--coreColor: #a8dfff;
+};
+
 body {
 
 	/* Removes margin in body */
@@ -46,4 +51,9 @@ body {
 
 .footer-links {
 	margin-bottom: 5rem;
+}
+
+/* Adds hover color on tables */
+.table-hover tbody tr:hover td {
+    background-color: var(--coreColor)!important;
 }

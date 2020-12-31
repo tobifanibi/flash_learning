@@ -22,9 +22,28 @@
 
 {% block body %}
 
-  <div class="text-center">
-    <h6>Current Score: {{score}}</h6>
-  </div>
+  <table class="table text-center table-striped table-responsive table-hover table-bordered re">
+  <thead class="thead-dark">
+    <tr>
+      <th class="align-middle" scope="col">Statistic</th>
+      <th class="align-middle" scope="col">Measurement</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="align-middle" scope="row">Total Points<br>(Sum of Total Points Received)</td>
+      <td class="align-middle">{{score}}</td>
+    </tr>
+    <tr>
+      <td class="align-middle" scope="row">Flashcard Accuracy<br>(Percent of Correct Flashcards out of Total Flashcards Attempted)</td>
+      <td class="align-middle">{{accuracy}}</td>
+    </tr>
+    <tr>
+      <td class="align-middle" scope="row">Total Progress<br>(Percent of Number of Flashcards Attempted out of Total Flashcards Available)</td>
+      <td class="align-middle">{{progress}}</td>
+    </tr>
+  </tbody>
+</table>
 
   <div class="container-fluid">
     <div class="justify-content-center row ">
