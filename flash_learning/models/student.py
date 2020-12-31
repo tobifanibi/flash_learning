@@ -30,8 +30,10 @@ class Student(UserMixin, db.Model):
     grade = db.Column(db.String(64), index=True)
     activated = db.Column(db.Boolean, default=False)
     points = db.Column(db.Integer, default=0, index=True)
+    flashcards_attempted = db.Column(db.Integer, default=0, index=True)
+    flashcards_correct = db.Column(db.Integer, default=0, index=True)
 
-    def __init__(self, first_name, last_name, username, grade, email, password, points):
+    def __init__(self, first_name, last_name, username, grade, email, password, points, flashcards_attempted, flashcards_correct):
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
@@ -40,6 +42,8 @@ class Student(UserMixin, db.Model):
         self.set_password(password)
         self.alternative_id = b64encode(os.urandom(24)).decode('utf-8')
         self.points = points
+        self.flashcards_attempted = flashcards_attempted
+        self.flashcards_correct = flashcards_correct
 
     def __repr__(self):
         return f"<User {self.username}>"
