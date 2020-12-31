@@ -11,9 +11,6 @@
 
 <div class="float-left"><h3>Hello, {{ user.first_name }}</h3></div><br><br>
 
-
-
-
 <div class="w-100">
 	<div class="row w-100">
 	    <div class="col-4 border">
@@ -26,7 +23,7 @@
 	            </div>
 	        </div>
 	        <div class="row">
-	        	<div class="d-md-flex">
+	        	<div class="d-md-flex w-100">
 				<div class="overflow-auto col-md-6 border w-100" style="max-height: 300px;">
 				{% for subject in subjects %}
 					<p>{{ subject.name }}</p>
