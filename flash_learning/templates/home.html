@@ -10,20 +10,30 @@
 
 <div class="float-left"><h3>Hello, {{ user.first_name }}</h3></div><br><br>
 
-<div class="container w-100">
-	<div class="row">
-	    <div class="col-md-8 border">
+
+<div class="d-md-flex">
+      <div class="overflow-auto p-3 mb-3 mb-md-0 mr-md-3 border" style="max-width: 260px; max-height: 100px;">
+        {% for subject in subjects %}
+			<p>{{ subject.name }}</p>
+		{% endfor %}
+      </div>
+</div>
+
+
+<div class="w-100">
+	<div class="row w-100">
+	    <div class="col-4 border">
 	        <div class="row">
 	            <div class="col-md-6 border">
-	                <div class="well">Subjects</div>
+	                <div class="well"><h5>Subjects</h5></div>
 	            </div>
 	            <div class="col-md-6 border">
-	                <div class="well">Decks</div>
+	                <div class="well"><h5>Decks</h5></div>
 	            </div>
 	        </div>
-	        <div class="row">
+	        <div class="row overflow-auto">
 	            <div class="col-md-6 border">
-	                <div class="well col border overflow-auto">
+	                <div class="well col border ">
 						{% for subject in subjects %}
 							<p>{{ subject.name }}</p>
 						{% endfor %}
@@ -34,48 +44,43 @@
 	            </div>
 	        </div>
 	    </div>
-	    <div class="col-md-4 border">
-	        <div class="well">1
-				<div class="float-left"><h5>Current Deck: (Deck Name)</h5></div><br>
-				<div class="float-left"><h6>Current Subject: (Subject Name)</h6></div><br><br>
+	    <div class="col-md-8 border">
 
-				<div id="cardArea">Card Goes Here</div>
-				<div id="buttonArea">
-					<button type="button" class="btn btn-secondary">Next</button>
-					<button type="button" class="btn btn-primary btn-large">Submit</button>
-					<button type="button" class="btn btn-secondary">Prev.</button>
-				</div>
-	        </div>
+	    	<div class="card text-center">
+	    		<div class="card-header">
+	    			Current Deck: (Deck Name)<br>
+	    			Current Subject: (Subject Name)<br>
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+					</div>
+	    		</div>
+	    		<div class="card-body">
+	    			<h6 class="card-title">Card (#) of (#)</h6>
+	    			<div class="card min-vw-50">
+		    			<div class="card-body">
+		    				<p class="card-text">(Flashcard Definition goes here).</p>
+		    			</div>
+	    			</div>
+	    			<div class="input-group mb-3">
+						<input type="text" class="form-control" placeholder="Answer" aria-label="Answer" aria-describedby="basic-addon2">
+						<div class="input-group-append">
+							<button class="btn btn-primary btn-large" type="button">Submit</button>
+						</div>
+					</div>
+	    			<div id="buttonArea">
+						<button type="button" class="btn btn-secondary">Next</button>
+						<button type="button" class="btn btn-secondary">Prev.</button>
+					</div>
+	    		</div>
+	    		<div class="card-footer text-muted">
+	    			2 days ago
+	    		</div>
+	    	</div>
 	    </div>
 	    
 	</div>
-	
+
 </div>
-
-<div class="container w-100">
-	<div class="row border">
-		<div class="col border">
-			<h5>Current Subjects</h5>
-		</div>
-		<div class="col-md-auto border">
-			Current Deck
-		</div>
-		<div class="col-md-auto border">
-			Current Flashcard
-		</div>
-	</div>
-	<div class="row border">
-
-		<div class="col-md-auto border">
-			Deck
-		</div>
-		<div class="col-md-auto border">
-			
-		</div>
-	</div>
-</div>
-
-
     
 {% endblock %}
 
