@@ -1,5 +1,10 @@
 /* main.css */
 
+/* Adds main core color to be referenced in multiple other locations */
+:root {
+	--coreColor: #a8dfff;
+};
+
 body {
 
 	/* Removes margin in body */
@@ -46,4 +51,44 @@ body {
 
 .footer-links {
 	margin-bottom: 5rem;
+}
+
+/* Adds hover color on tables */
+.table-hover tbody tr:hover td {
+    background-color: var(--coreColor)!important;
+}
+
+
+/* Added responsive typography (over-ruling sizing for fonts) from bootstrap-table.com */
+html {
+  font-size: 1rem;
+}
+
+@include media-breakpoint-up(sm) {
+  html {
+    font-size: 1.2rem;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  html {
+    font-size: 1.4rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  html {
+    font-size: 1.6rem;
+  }
+}
+
+/* Add smaller text font */
+.smaller-text {
+  font-size: smaller;
+}
+
+/* Add general center class */
+.center {
+  margin-left: auto;
+  margin-right: auto;
 }

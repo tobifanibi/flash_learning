@@ -6,7 +6,9 @@
     "email": "betty@boop.com",
     "password": "BoopTheSnoot123!",
     "grade": "K",
-    "points": "100"
+    "points": "100",
+    "flashcards_correct": "5",
+    "flashcards_attempted": "10"
   },
   {
     "first_name": "Bugs",
@@ -15,7 +17,9 @@
     "email": "bugs@bunny.com",
     "password": "Buggie789!!",
     "grade": "K",
-    "points": "200"
+    "points": "200",
+    "flashcards_correct": "51",
+    "flashcards_attempted": "167"
   },
   {
     "first_name": "Charlie",
@@ -24,7 +28,9 @@
     "email": "charlie@brown.com",
     "password": "BrownieCake4&!",
     "grade": "K",
-    "points": "320"
+    "points": "320",
+    "flashcards_correct": "25",
+    "flashcards_attempted": "140"
   },
   {
     "first_name": "Daffy",
@@ -33,7 +39,9 @@
     "email": "daffy@duck.com",
     "password": "QuackQuack67@@1",
     "grade": "K",
-    "points": "430"
+    "points": "430",
+    "flashcards_correct": "235",
+    "flashcards_attempted": "450"
   },
   {
     "first_name": "Spongebob",
@@ -42,7 +50,9 @@
     "email": "spongebob@squarepants.com",
     "password": "IMREADy1!!",
     "grade": "K",
-    "points": "560"
+    "points": "560",
+    "flashcards_correct": "5",
+    "flashcards_attempted": "12"
   },
   {
     "first_name": "Squidward",
@@ -51,7 +61,9 @@
     "email": "squidward@tentacles.com",
     "password": "ClarinetIsLove333##",
     "grade": "1",
-    "points": "70"
+    "points": "70",
+    "flashcards_correct": "5",
+    "flashcards_attempted": "16"
   },
   {
     "first_name": "Eugene",
@@ -60,7 +72,9 @@
     "email": "eugene@krabs.com",
     "password": "MOneyMoneyM0ney!!",
     "grade": "1",
-    "points": "960"
+    "points": "960",
+    "flashcards_correct": "75",
+    "flashcards_attempted": "90"
   },
   {
     "first_name": "Scooby",
@@ -69,7 +83,9 @@
     "email": "scooby@doo.com",
     "password": "Ruff&&1111",
     "grade": "1",
-    "points": "40"
+    "points": "40",
+    "flashcards_correct": "15",
+    "flashcards_attempted": "60"
   },
   {
     "first_name": "Tom",
@@ -78,7 +94,9 @@
     "email": "tom@cat.com",
     "password": "CatMix123!!",
     "grade": "1",
-    "points": "230"
+    "points": "230",
+    "flashcards_correct": "75",
+    "flashcards_attempted": "210"
   },
   {
     "first_name": "Jerry",
@@ -87,7 +105,9 @@
     "email": "jerry@mouse.com",
     "password": "CanttouchThis!#@!3",
     "grade": "1",
-    "points": "560"
+    "points": "560",
+    "flashcards_correct": "5",
+    "flashcards_attempted": "10"
   },
   {
     "first_name": "Mickey",
@@ -96,7 +116,9 @@
     "email": "mickey@mouse.com",
     "password": "HippityHoopla1234$$",
     "grade": "2",
-    "points": "650"
+    "points": "650",
+    "flashcards_correct": "25",
+    "flashcards_attempted": "310"
   },
   {
     "first_name": "Winnie",
@@ -105,7 +127,9 @@
     "email": "winnie@thepooh.com",
     "password": "HoneyLove&&1243",
     "grade": "2",
-    "points": "780"
+    "points": "780",
+    "flashcards_correct": "45",
+    "flashcards_attempted": "70"
   },
   {
     "first_name": "Homer",
@@ -114,7 +138,9 @@
     "email": "homer@simpson.com",
     "password": "WOOHooo!@3",
     "grade": "2",
-    "points": "230"
+    "points": "230",
+    "flashcards_correct": "45",
+    "flashcards_attempted": "70"
   },
   {
     "first_name": "Wile E.",
@@ -123,7 +149,9 @@
     "email": "wile@ecoyote.com",
     "password": "FallingFromabove123$",
     "grade": "3",
-    "points": "50"
+    "points": "50",
+    "flashcards_correct": "125",
+    "flashcards_attempted": "170"
   },
   {
     "first_name": "Shaggy",
@@ -132,7 +160,9 @@
     "email": "shaggy@rogers.com",
     "password": "YOINKs!32",
     "grade": "3",
-    "points": "340"
+    "points": "340",
+    "flashcards_correct": "95",
+    "flashcards_attempted": "107"
   },
   {
     "first_name": "Shrek",
@@ -141,7 +171,9 @@
     "email": "shrek@ogre.com",
     "password": "ONionZ1#11",
     "grade": "3",
-    "points": "270"
+    "points": "270",
+    "flashcards_correct": "35",
+    "flashcards_attempted": "60"
   },
   {
     "first_name": "Fred",
@@ -150,7 +182,9 @@
     "email": "fred@flinstone.com",
     "password": "YabaDabado00!",
     "grade": "4",
-    "points": "670"
+    "points": "670",
+    "flashcards_correct": "35",
+    "flashcards_attempted": "70"
   },
   {
     "first_name": "Bart",
@@ -159,7 +193,9 @@
     "email": "bart@simpson.com",
     "password": "Hehehe&&132",
     "grade": "4",
-    "points": "120"
+    "points": "120",
+    "flashcards_correct": "15",
+    "flashcards_attempted": "20"
   },
   {
     "first_name": "Pink",
@@ -168,7 +204,9 @@
     "email": "pink@panther.com",
     "password": "SneakyPink11^&",
     "grade": "4",
-    "points": "70"
+    "points": "70",
+    "flashcards_correct": "15",
+    "flashcards_attempted": "30"
   },
   {
     "first_name": "Stewie",
@@ -177,7 +215,9 @@
     "email": "stewie@griffin.com",
     "password": "WhatIsthisN0neSen$e",
     "grade": "5",
-    "points": "0"
+    "points": "0",
+    "flashcards_correct": "85",
+    "flashcards_attempted": "90"
   },
   {
     "first_name": "Patrick",
@@ -186,7 +226,9 @@
     "email": "patrick@star.com",
     "password": "Dr.ProfessorP4trick",
     "grade": "5",
-    "points": "10"
+    "points": "10",
+    "flashcards_correct": "25",
+    "flashcards_attempted": "70"
   },
   {
     "first_name": "Timmy",
@@ -195,7 +237,9 @@
     "email": "timmy@turner.com",
     "password": "IwishIhad&3abird",
     "grade": "5",
-    "points": "80"
+    "points": "80",
+    "flashcards_correct": "35",
+    "flashcards_attempted": "60"
   },
   {
     "first_name": "Sandy",
@@ -204,7 +248,9 @@
     "email": "sandy@cheeks.com",
     "password": "MadScIent1st!",
     "grade": "6",
-    "points": "590"
+    "points": "590",
+    "flashcards_correct": "15",
+    "flashcards_attempted": "40"
   },
   {
     "first_name": "Mr.",
@@ -213,7 +259,9 @@
     "email": "mr@burns.com",
     "password": "IBr3atheEv!l",
     "grade": "6",
-    "points": "670"
+    "points": "670",
+    "flashcards_correct": "45",
+    "flashcards_attempted": "106"
   },
   {
     "first_name": "Jimmy",
@@ -222,7 +270,9 @@
     "email": "jimmy@neutron.com",
     "password": "Sup3rGen!us",
     "grade": "6",
-    "points": "1250"
+    "points": "1250",
+    "flashcards_correct": "25",
+    "flashcards_attempted": "90"
   },
   {
     "first_name": "Jake",
@@ -231,7 +281,9 @@
     "email": "jake@thedog.com",
     "password": "Sl1nkey&1",
     "grade": "7",
-    "points": "560"
+    "points": "560",
+    "flashcards_correct": "54",
+    "flashcards_attempted": "150"
   },
   {
     "first_name": "Lilo",
@@ -240,7 +292,9 @@
     "email": "lilo@pelekai.com",
     "password": "Wh3resSt!tch?",
     "grade": "7",
-    "points": "190"
+    "points": "190",
+    "flashcards_correct": "52",
+    "flashcards_attempted": "1002"
   },
   {
     "first_name": "Johnny",
@@ -249,7 +303,9 @@
     "email": "johnny@bravo.com",
     "password": "I4mMusc!e",
     "grade": "7",
-    "points": "560"
+    "points": "560",
+    "flashcards_correct": "55",
+    "flashcards_attempted": "10003"
   },
   {
     "first_name": "Inspector",
@@ -258,7 +314,9 @@
     "email": "inspector@gadget.com",
     "password": "GogoG4dget!",
     "grade": "8",
-    "points": "1000"
+    "points": "1000",
+    "flashcards_correct": "105",
+    "flashcards_attempted": "120"
   },
   {
     "first_name": "Gumball",
@@ -267,7 +325,9 @@
     "email": "gumball@watterson.com",
     "password": "Haha!33455",
     "grade": "8",
-    "points": "0"
+    "points": "0",
+    "flashcards_correct": "25",
+    "flashcards_attempted": "30"
   },
   {
     "first_name": "Angelica",
@@ -276,6 +336,8 @@
     "email": "angelica@pickles.com",
     "password": "I4mBully#@",
     "grade": "8",
-    "points": "800"
+    "points": "800",
+    "flashcards_correct": "37",
+    "flashcards_attempted": "40"
   }
 ]

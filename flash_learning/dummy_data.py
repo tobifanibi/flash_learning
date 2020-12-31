@@ -85,7 +85,10 @@ class DummyData:
                         grade=student["grade"],
                         email=student["email"],
                         password=student["password"],
-                        points=student["points"])
+                        points=student["points"],
+                        flashcards_attempted=student["flashcards_attempted"],
+                        flashcards_correct=student["flashcards_correct"])
+
             db.session.add(u)
             db.session.commit()
 

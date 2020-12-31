@@ -93,7 +93,7 @@ Contributions are what make the open source community such an amazing place to b
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [LICENSE](https://github.com/asa-leholland/{repo-name}/LICENSE.txt) for more information.
+Distributed under the MIT License. See [LICENSE](https://github.com/team-penguin-hackathon/flash_learning/blob/main/flash_learning/LICENSE) for more information.
 
 
 
@@ -102,9 +102,9 @@ Distributed under the MIT License. See [LICENSE](https://github.com/asa-lehollan
 
 Have a question about the project? Feel free to contact us.
 
-[Mohamed Al-Hussein](https://github.com/MohamedAl-Hussein) - 45280604+MohamedAl-Hussein@users.noreply.github.com
-[Tobi Fanibi](https://github.com/tobifanibi) - 58971180+tobifanibi@users.noreply.github.com
-[Asa LeHolland](https://github.com/asa-leholland) - asaleholland@gmail.com
+* [Mohamed Al-Hussein](https://github.com/MohamedAl-Hussein) - 45280604+MohamedAl-Hussein@users.noreply.github.com
+* [Tobi Fanibi](https://github.com/tobifanibi) - 58971180+tobifanibi@users.noreply.github.com
+* [Asa LeHolland](https://github.com/asa-leholland) - asaleholland@gmail.com
 
 
 Project Link: [https://github.com/team-penguin-hackathon/flash_learning](https://github.com/team-penguin-hackathon/flash_learning)
@@ -115,7 +115,8 @@ Project Link: [https://github.com/team-penguin-hackathon/flash_learning](https:/
 ## Acknowledgements
 
 * [othneildrew](https://github.com/othneildrew) for creating the [template README file](https://github.com/othneildrew/Best-README-Template) that was used as the starting point for the README for this project. 
-* [Mark Doughten](https://github.com/markdoughten) for the initial idea and website concept for this project. 
+* [Mark Doughten](https://github.com/markdoughten) for the initial idea and website concept for this project.
+* We also found the Youtube playlists on Flask web app developement created by [Corey Schafer](https://www.youtube.com/playlist?list=PL-osiE80TeTs4UjLw5MM6OjgkjFeUxCYH) and [Tim Ruscica](https://www.youtube.com/watch?v=mqhxxeeTbu0&list=PLzMcBGfZo4-n4vJJybUVV3Un_NFS5EOgX)to be quite useful.
 
 
 

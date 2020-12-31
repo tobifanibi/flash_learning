@@ -6,9 +6,75 @@
 {% endblock %}
 
 {% block body %}
-    <h3>Name: {{ user.name }}</h3>
-    <h3>Username: {{ user.username }}</h3>
-    <h3>School: {{ user.school}}</h3>
-    <h3>Grade: {{ user.grade }}</h3>
+
+
+    <div class="w-25">
+
+    	<h6>Profile Details</h6>
+
+    <div class="input-group mb-3 input-group-sm">
+    	<div class="input-group-prepend">
+    		<span class="input-group-text">First Name</span>
+    	</div>
+    	<input type="text" class="form-control" placeholder={{ user.first_name }} aria-label="Student first name" aria-describedby="basic-addon2">
+    	<div class="input-group-append">
+    		<button class="btn btn-outline-secondary" type="button">Edit</button>
+    	</div>
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+    	<div class="input-group-prepend">
+    		<span class="input-group-text">Last Name</span>
+    	</div>
+    	<input type="text" class="form-control" placeholder={{ user.last_name }} aria-label="Student last name" aria-describedby="basic-addon2">
+    	<div class="input-group-append">
+    		<button class="btn btn-outline-secondary" type="button">Edit</button>
+    	</div>
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+    	<div class="input-group-prepend">
+    		<span class="input-group-text">Username</span>
+    	</div>
+    	<input type="text" class="form-control" placeholder={{ user.username }} aria-label="Student username" aria-describedby="basic-addon2">
+    	<div class="input-group-append">
+    		<button class="btn btn-outline-secondary" type="button">Edit</button>
+    	</div>
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+    	<div class="input-group-prepend">
+    		<span class="input-group-text">School</span>
+    	</div>
+    	<input type="text" class="form-control" placeholder={{ school_name }} aria-label="Student school" aria-describedby="basic-addon2">
+    	<div class="input-group-append">
+    		<button class="btn btn-outline-secondary" type="button">Edit</button>
+    	</div>
+    </div>
+
+    <div class="input-group mb-3 input-group-sm">
+    	<div class="input-group-prepend">
+    		<span class="input-group-text">Grade</span>
+    	</div>
+    	<select class="custom-select" id="inputGroupSelect04">
+    		<option selected>{{grade}}</option>
+    		<option value="1">Kindergarden</option>
+    		<option value="2">1st</option>
+    		<option value="3">2nd</option>
+    		<option value="4">3rd</option>
+    		<option value="5">4th</option>
+    		<option value="6">5th</option>
+    		<option value="7">6th</option>
+    		<option value="8">7th</option>
+    		<option value="9">8th</option>
+    	</select>
+    	<div class="input-group-append">
+    		<button class="btn btn-outline-secondary" type="button">Edit</button>
+    	</div>
+    </div>
+
+    </div>
+
+    
 {% endblock %}
 

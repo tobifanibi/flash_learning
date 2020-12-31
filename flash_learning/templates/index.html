@@ -4,6 +4,12 @@
 
 <!-- Jinja2 Template Block for Head of Webpage -->
 {% block head %}
+
+{% endblock %}
+
+<!-- Jinja2 Template Block for Body of Webpage -->
+{% block body %}
+
 <!-- Navigation bar -->
 <div>
     {% if current_user.is_anonymous %}
@@ -18,13 +24,10 @@
         <p>Didn't get the email? <a href="http://localhost:5000/resend">Resend</a>.</p>
     {% endif %}
 </div>
-{% endblock %}
 
-<!-- Jinja2 Template Block for Body of Webpage -->
-{% block body %}
 <div class="content">
 	
-    <p1>Welcome to Flash Learning! This site lets children from grades K through 8 to review their school subjects with
+    <p1>Welcome to Flash Learning! This site lets children from grades K through 8 review their school subjects with
         flashcards, compare their scores with other students, and explore additional topics beyond their current grade
         level. Register today!</p1>
 </div>
