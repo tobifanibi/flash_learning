@@ -6,6 +6,11 @@ from flash_learning.models.flashcard import Grade, Subject
 from flash_learning.models.student import Student
 
 
+# dummy variable for total number of Flashcards
+# This will be updated once flashcard backend has been fleshed out
+total_flashcards = 1000
+
+
 students = Blueprint("student", __name__)
 
 
@@ -32,7 +37,9 @@ def profile(username):
 def stats(username):
     student = Student.query.filter_by(username=current_user.username).first()
     score = current_user.points
-    return render_template("stats.html", title="Stats", user=student, score=score)
+    accuracy = "{0:.0%}".format(int(current_user.flashcards_correct) / int(current_user.flashcards_attempted))
+    progress = "{0:.0%}".format(int(current_user.flashcards_attempted) / total_flashcards)
+    return render_template("stats.html", title="Stats", user=student, score=score, accuracy=accuracy, progress=progress)
 
 
 @students.route("/student/<username>/leaderboard", methods=["GET"])
