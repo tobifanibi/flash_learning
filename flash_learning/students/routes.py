@@ -20,7 +20,7 @@ def home(username):
     # Get the subjects for the student's grade level.
     student = Student.query.filter_by(username=current_user.username).first()
     grade_id = db.session.query(Grade).filter(Grade.grade == student.grade).first().id
-    subjects = Subject.query.filter_by(grade_id=grade_id).all()
+    subjects = Subject.query.filter_by(grade_id=grade_id).distinct()
 
     return render_template("home.html", title="Home", user=student, subjects=subjects)
 
