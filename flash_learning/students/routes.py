@@ -28,10 +28,24 @@ def home(username):
 @students.route("/student/<username>/profile", methods=["GET"])
 @login_required
 def profile(username):
+
+    # Obtain the student username
     student = Student.query.filter_by(username=current_user.username).first()
+
+    # Obtain the student school name, or default to None
     school_value = Student.query.filter_by(username=current_user.school).first()
     school_name = school_value if school_value else 'None'
-    return render_template("profile.html", title="Profile", user=student, school_name = school_name)
+
+    # Obtain the student grade, and format the string appropriately
+    raw_grade = Student.query.filter_by(username=current_user.grade).first()
+
+    # Create a dictionary of shorthand grade levels used by the database and human readable equivalents to display on the UI
+    grade_conversion = {'K': 'Kindergarden', '1': '1st', '2': '2nd', '3': '3rd', '4': '4th', '5': '5th', '6': '6th', '7': '7th', '8': '8th'}
+
+    # Convert raw student grade in the database to human readable equivalent, else default to the raw grade
+    grade = grade_conversion[raw_grade] if raw_grade in grade_conversion else raw_grade
+
+    return render_template("profile.html", title="Profile", user=student, school_name = school_name, grade=grade)
 
 
 @students.route("/student/<username>/stats", methods=["GET"])
