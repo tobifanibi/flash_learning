@@ -50,24 +50,24 @@
 <body>
 
     <!-- Boiler language for flashed messages  -->
-            {% with messages = get_flashed_messages() %}
+    {% with messages = get_flashed_messages() %}
 
-                <!-- Check for messages that are ready to display -->
-                {% if messages %}
-                    
-                    <!-- Iterate through all current messages -->
-                    {% for message in messages %}
+    <!-- Check for messages that are ready to display -->
+    {% if messages %}
 
-                        <!-- Add each message as paragraph tag -->
-                        <p>{{message}}</p>
+    <!-- Iterate through all current messages -->
+    {% for message in messages %}
 
-                    {% endfor %}
-                {% endif %}
-            {% endwith %}
+    <!-- Add each message as paragraph tag -->
+    <p>{{message}}</p>
+
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
 
     <div id="page-container">  
-        
-                
+
+
 
         <main>
             <!-- Add Jinja2 syntax creating block in template for the body -->
@@ -75,34 +75,27 @@
         </main>
 
 
+        <div class="navbar fixed-bottom w-100 border-top h-5">
 
-        <footer class="footer mt-auto py-3 bg-light">
-
-            <div class="container">
-              <div class="row">
-                <div class="col-sm text-center footer-links">
-                  <a href="/" class="text-muted">Home</a>
-                </div>
-                <div class="col-sm text-center footer-links">
-                  <a href="/about" class="text-muted">About</a>
-                </div>
-                <div class="col-sm text-center footer-links">
-                  <a href="/faq" class="text-muted">FAQ</a>
-                </div>
-              </div>
+            <div class="d-flex flex-row">
+              <div class="col-sm text-center footer-links">
+                <a href="/" class="text-muted">Home</a>
             </div>
 
+            <div class="col-sm text-center footer-links">
+              <a href="/about" class="text-muted">About</a>
+          </div>
+          <div class="col-sm text-center footer-links">
+              <a href="/faq" class="text-muted">FAQ</a>
+          </div>
+    </div>
+        <span class="text-muted text-center">
+            <p>Made by Team Penguin. Project repository can be found <a href="https://github.com/team-penguin-hackathon/flash_learning">here</a>.</p>
+        </span>
 
-    
 
-<!-- Centered bar at the bottom -->
-<div class="container text-center">
-    <span class="text-muted">
-        <p>Made by Team Penguin. Project repository can be found <a href="https://github.com/team-penguin-hackathon/flash_learning">here</a>.</p>
-    </span>
 </div>
-</footer>
-
+</div>
 </div>
 
 <!-- External scripts for bootstrap (nav bar and side bar) -->
