@@ -3,6 +3,7 @@
 {% block page_title %}Home{% endblock %}
 
 {% block head %}
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flashcard.css') }}">
 {% endblock %}
 
 
@@ -11,13 +12,6 @@
 <div class="float-left"><h3>Hello, {{ user.first_name }}</h3></div><br><br>
 
 
-<div class="d-md-flex">
-      <div class="overflow-auto p-3 mb-3 mb-md-0 mr-md-3 border" style="max-width: 260px; max-height: 100px;">
-        {% for subject in subjects %}
-			<p>{{ subject.name }}</p>
-		{% endfor %}
-      </div>
-</div>
 
 
 <div class="w-100">
@@ -31,17 +25,21 @@
 	                <div class="well"><h5>Decks</h5></div>
 	            </div>
 	        </div>
-	        <div class="row overflow-auto">
-	            <div class="col-md-6 border">
-	                <div class="well col border ">
-						{% for subject in subjects %}
-							<p>{{ subject.name }}</p>
-						{% endfor %}
-					</div>
-	            </div>
-	            <div class="col-md-6 border">
-	                <div class="well">3</div>
-	            </div>
+	        <div class="row">
+	        	<div class="d-md-flex">
+				<div class="overflow-auto col-md-6 border w-100" style="max-height: 300px;">
+				{% for subject in subjects %}
+					<p>{{ subject.name }}</p>
+				{% endfor %}
+				</div>
+				<div class="overflow-auto col-md-6 border w-100" style="max-height: 300px;">
+				{% for x in range(50) %}
+					<p>Deck {{ x }}</p>
+				{% endfor %}
+				</div>
+</div>
+
+	           
 	        </div>
 	    </div>
 	    <div class="col-md-8 border">
