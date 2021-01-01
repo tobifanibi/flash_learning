@@ -18,8 +18,6 @@ def load_user(user_id):
 class Student(UserMixin, db.Model):
     """Student data model."""
 
-    #static key for user
-    # primary keys are required by SQLAlchemy
     id = db.Column(db.Integer, primary_key=True)
     alternative_id = db.Column(db.Integer, index=True)
     email = db.Column(db.String(120), index=True, unique=True)
@@ -34,7 +32,8 @@ class Student(UserMixin, db.Model):
     flashcards_attempted = db.Column(db.Integer, default=0, index=True)
     flashcards_correct = db.Column(db.Integer, default=0, index=True)
 
-    def __init__(self, first_name, last_name, username, grade, email, password, points, flashcards_attempted, flashcards_correct, school=''):
+    def __init__(self, first_name, last_name, username, grade, email, password, points, flashcards_attempted,
+                 flashcards_correct, school=''):
         self.first_name = first_name
         self.last_name = last_name
         self.username = username
