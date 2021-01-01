@@ -47,6 +47,7 @@ class Flashcard(db.Model):
     question = db.Column(db.String)
     q_image = db.Column(db.String)
     answer = db.Column(db.String)
+    student_flashcard = db.relationship("StudentFlashcard", backref="student_flashcard", lazy=True)
 
     def __init__(self, number, question, answer, q_image, deck_id):
         self.number = number
