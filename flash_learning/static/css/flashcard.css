@@ -1,7 +1,15 @@
 /* Custom Css for flashcard page*/
 
-.scroll-column = {
+.scroll-column {
 	background-color: blue;/*
 	max-width: 260px;
 	max-height: 300px;*/
+}
+
+#headingOne {
+	padding: 0px;
+}
+
+#headingTwo {
+	padding: 0px;
 }
