@@ -1,11 +1,10 @@
 import os
-from base64 import b64encode
 
+from base64 import b64encode
+from flask_login import UserMixin
 from werkzeug.security import check_password_hash, generate_password_hash
 
-
 from flash_learning import db, login_manager
-from flask_login import UserMixin
 
 
 @login_manager.user_loader
@@ -31,6 +30,7 @@ class Student(UserMixin, db.Model):
     points = db.Column(db.Integer, default=0, index=True)
     flashcards_attempted = db.Column(db.Integer, default=0, index=True)
     flashcards_correct = db.Column(db.Integer, default=0, index=True)
+    flashcards = db.relationship("StudentFlashcard", backref="student", lazy=True)
 
     def __init__(self, first_name, last_name, username, grade, email, password, points, flashcards_attempted,
                  flashcards_correct, school=''):
@@ -66,5 +66,9 @@ class Student(UserMixin, db.Model):
 
 
 class StudentFlashcard(db.Model):
+    """Flashcards reviewed by a student."""
+
     id = db.Column(db.String, primary_key=True)
+    student_id = db.Column(db.Integer, db.ForeignKey("student.id"), nullable=False)
+    flashcard_id = db.Column(db.Integer, db.ForeignKey("flashcard.id"), nullable=False)
     last_reviewed = db.Column(db.DATE, index=True)

@@ -29,7 +29,7 @@
 
 						<!-- Iterate over subjects (from students.routes.py) -->
 						{% for subject in subjects %}
-						<a href="#" class="list-group-item list-group-item-action">{{ subject.name }}</a>
+                            <a href="{{ url_for("student.subject", username=current_user.username, subject=subject.name) }}" class="list-group-item list-group-item-action">{{ subject.name }}</a>
 						{% endfor %}
 
 					</div>
@@ -52,9 +52,9 @@
 				<div class="overflow-auto col-md-6 w-100 center" style="max-height: 300px;">
 					<div class="list-group">
 
-						<!-- Iterate over integers and place each integer as a deck -->
-						{% for x in range(50) %}
-						<a href="#" class="list-group-item list-group-item-action">Deck {{ x }}</a>
+						<!-- Iterate over decks and place each deck -->
+						{% for deck in decks %}
+                            <a href="{{ url_for("student.deck", username=current_user.username, subject="Arts", deck=deck.name) }}" class="list-group-item list-group-item-action">{{ deck.name }}</a>
 						{% endfor %}
 
 					</div>
