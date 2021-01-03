@@ -42,9 +42,9 @@ class Student(UserMixin, db.Model):
         self.school = school
         self.set_password(password)
         self.alternative_id = b64encode(os.urandom(24)).decode('utf-8')
-        self.points = None
-        self.flashcards_attempted = None
-        self.flashcards_correct = None
+        self.points = points
+        self.flashcards_attempted = flashcards_attempted
+        self.flashcards_correct = flashcards_correct
 
     def __repr__(self):
         return f"<User {self.username}>"
