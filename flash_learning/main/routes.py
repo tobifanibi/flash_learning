@@ -128,20 +128,22 @@ def signup():
     form = SignupForm()
 
     if form.validate_on_submit():
+        #set new Student parameters as None
         user = Student(first_name=form.first_name.data,
                        last_name=form.last_name.data,
                        username=form.username.data,
                        grade=form.grade.data,
                        email=form.email.data,
-                       password=form.password.data)
+                       password=form.password.data,
+                       points=None,
+                       flashcards_attempted=None,
+                       flashcards_correct=None)
 
-        alternative_id = b64encode(os.urandom(24)).decode('utf-8')
 
-        while Student.query.filter_by(alternative_id=alternative_id).first() is not None:
-            alternative_id = b64encode(os.urandom(24)).decode('utf-8')
+        while Student.query.filter_by(alternative_id=user.get_id()).first() is not None:
+            user.alternative_id = b64encode(os.urandom(24)).decode('utf-8')
 
         user.set_password(form.password.data)
-        user.alternative_id = alternative_id
         login_user(user, remember=False)
         token = create_confirmation_token(user.email)
         confirm_url = url_for('email.confirm_email', token=token, _external=True)

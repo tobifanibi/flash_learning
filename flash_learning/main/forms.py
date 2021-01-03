@@ -28,6 +28,8 @@ class SignupForm(FlaskForm):
     email = StringField('email', validators=[DataRequired(), Email()])
     password = PasswordField('password', validators=[DataRequired(), check_password])
     submit = SubmitField("Sign Up")
+    check_password = PasswordField('confirm password', validators=[DataRequired()])
+    submit = SubmitField("Sign Up")
 
     def validate_username(self, username):
         """Check if the username is already taken."""
