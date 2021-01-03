@@ -7,7 +7,7 @@ from flask_login import login_user, current_user, logout_user, login_required
 from flash_learning.email.utils import send_email
 from flash_learning.main.emailtask import create_confirmation_token
 from flash_learning.models.student import Student
-from flash_learning.main.forms import LoginForm, ResetForm, SignupForm
+from flash_learning.main.forms import LoginForm, SettingsForm, SignupForm
 from flash_learning import db
 
 main = Blueprint("main", __name__)
@@ -20,15 +20,14 @@ def index():
     return render_template("index.html")
 
 
-@main.route('/reset-password', methods=["GET", "POST"])
+@main.route('/settings', methods=["GET", "POST"])
 @login_required
-def reset():
+def settings():
     """"Student login page."""
 
     if not current_user.is_authenticated:
         return redirect(url_for("main.index"))
-
-    form = ResetForm()
+    form = SettingsForm()
 
     if form.validate_on_submit():
 
@@ -46,7 +45,7 @@ def reset():
 
         return render_template("index.html")
 
-    return render_template("reset.html", title="reset password", form=form, current_user=current_user)
+    return render_template("settings.html", title="reset password", form=form, current_user=current_user)
 
 
 @main.route('/login', methods=["GET", "POST"])
